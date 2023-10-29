@@ -3,22 +3,22 @@
     {
       "name": "youtube",
       "icon": "FaYoutube",
-      "link": "https://www.youtube.com/@trekstud"
+      "link": "https://www.youtube.com/@fitstud"
     },
     {
       "name": "instagram",
       "icon": "FaInstagram",
-      "link": "https://www.instagram.com/trekstud"
+      "link": "https://www.instagram.com/fitstud.io"
     },
     {
       "name": "twitter",
       "icon": "FaX",
-      "link": "https://x.com/trekstud"
+      "link": "https://x.com/fitstud_io"
     },
     {
       "name": "facebook",
       "icon": "FaFacebook",
-      "link": "https://www.facebook.com/trekstud"
+      "link": "https://www.facebook.com/fitstud.io"
     }
   ]
 }

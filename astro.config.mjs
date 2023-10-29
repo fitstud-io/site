@@ -17,10 +17,15 @@ export default defineConfig({
   site: config.site.base_url ? config.site.base_url : "http://fitstud.io",
   base: config.site.base_path ? config.site.base_path : "/",
   trailingSlash: config.site.trailing_slash ? "always" : "never",
-  integrations: [react(), sitemap(), tailwind({
-    config: {
-      applyBaseStyles: false
-    }
+  integrations: [
+    react(),
+    sitemap({
+      changefreq: 'weekly',
+      priority: 0.7
+    }), tailwind({
+      config: {
+        applyBaseStyles: false
+      }
   }), image({
     serviceEntryPoint: "@astrojs/image/sharp"
   }), AutoImport({

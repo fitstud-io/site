@@ -1,33 +1,30 @@
 ---
-title: "About \"Trek Stud\""
-meta_title: "About TrekStud.io"
-description: "A blog about my backpacking adventures kayaking trips backcountry camping bushcraft survival and all the gear that goes with."
+title: "About fitstud.io"
+description: "A blog about my fitness journey"
 image: "/images/itsme.webp"
 draft: false
 ---
 
-### So, about that "name"
+### So, about me
 
-I want to clarify that I'm not an egomaniac, and it's understandable that you might be skeptical. In fact, those who truly know me personally would vouch for the opposite. So, it's important to note that the title of 'Trek Stud' wasn't something I bestowed upon myself. I'm actually a landscape photographer, and that's why I chose the name Trek Studio for my company. The name 'Trek Studio' combines 'trek' and 'studio,' reflecting my love for outdoor photography. When I registered the domain trekstud.io, I thought I was being clever. However, many people only read up to the period, resulting in some amusing misunderstandings.
+Well, let's just say I'm a bit of a Renaissance person. My resume reads like a Choose Your Own Adventure book, covering everything from sales wizardry 🧙‍♂️ to integration sorcery and even some web design magic. But, hidden amidst all that, there's a love story that began back in my high school freshman days – me and the gym.
 
-In a playful manner, my friends decided to tease me by calling me 'Trek Stud' to embarrass me. Taking it lightheartedly, I embraced the nickname and even adopted it as my trail name. It's my world, and I believe everyone has the freedom to do what they want. Don't judge me 😁.
+I'm not one to reveal my age, but let's just say it's been a few decades since those formative years 😬. And guess what? I'm still on that fitness journey, which is a testament to my unwavering dedication.
 
-## How it happened
-
-I have been involved in website and graphic design for quite some time now, both professionally and as a hobby, since the AOL days and probably before, do you know what a BBS is? Yeah I probably just age checked my self 🤷. 
-
-Photography, on the other hand, was more of a serendipitous discovery for me. However, it quickly became an addiction, and now I find myself seeing photo opportunities everywhere I look. Consequently, it was only a matter of time before I decided to establish a photography business and create my own brand. Over time, all my hobbies gradually transformed into income streams, and I must say, it's truly living the dream.
-
-![About](https://trekstud.io/images/trek_stud_alamden.webp)
+Now, my extensive experience might not directly contribute to what you need right now, but it's filled with valuable lessons on what not to do. Think of me as your sherpa, guiding 🗺️ you through the treacherous terrain of fitness decisions and shortcuts, ensuring you reach the peak of effectiveness in record time. It's a lifelong pursuit of perfection that I'm here to share with you.
 
 ## The Mission
 
-My main objective is to share the information that I learn on a daily basis. I hope that by doing so, I can assist others with the knowledge that I once sought, but struggled to find. 
+To inspire and empower individuals on their journey to a healthier, happier life. We believe that fitness is not just about appearances but about overall well-being, and we're here to guide and support you every step of the way. Our blog is a trusted source of expert advice, motivation, and practical tips, designed to help you achieve your fitness goals, no matter where you are in your fitness journey. We're committed to fostering a community of like-minded individuals who share a passion for health and wellness. With evidence-based information, personalized strategies, and a touch of inspiration, we aim to make fitness an enjoyable and sustainable part of life. Join us in the pursuit of a stronger, fitter, and more vibrant you.
 
-Ultimately, I aim to abide by the 'golden rule'—treating others as I would like to be treated myself. My intention is to provide factual and helpful information at all times 💯.
+![About](/images/about.webp)
 
 ## The end game
 
-Honestly, I find contentment in simple things and possess a humble nature. My primary goal is to pursue my passions while also ensuring the well-being of my family. I may not be a dreamer in the traditional sense, as I tend to prioritize practicality, but above all, I am a devoted father 👨‍🍼.
+At the heart of our mission, we aim to be more than just another fitness blog. We are dedicated to creating content that lingers in the minds and lives of our readers, leaving a lasting, positive imprint. Our commitment is to inspire and guide individuals on a journey towards improved health and well-being, nurturing the belief that a healthier, happier life is within reach.
 
-Ultimately, my utmost desire is for my sons to feel a sense of pride in their father. Their happiness and admiration mean the world to me.
+t's not just about quick fixes; it's about cultivating sustainable habits. We champion the idea that healthier choices should be integrated seamlessly into daily routines, making wellness an enduring part of life, not just a short-term goal.
+
+Our ultimate goal is to see our readers flourish, to witness them look back on their journey and recognize the positive influence our content has had. We aspire to be the guiding light on their path to a healthier, happier life, helping them embrace a mindset that health is a lifelong journey and that their well-being is worth every effort.
+
+We are more than just a blog; we are a partner in the pursuit of wellness, and we are dedicated to making a real and enduring difference in the lives of those who entrust us with their health and happiness."
