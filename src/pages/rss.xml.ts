@@ -23,7 +23,7 @@ export async function get(context) {
       pubDate: post.data.date,
       description:
         post.data.description || post.data.excerpt || post.data.content || '',
-      link: post.data.canonical,
+      link: metaSite.base_url + '/blog/' + post.data.id,
     })),
   });
 }
