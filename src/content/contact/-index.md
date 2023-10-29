@@ -1,6 +1,5 @@
 ---
 title: "Contact"
-meta_title: ""
-description: "this is meta description"
+description: "this is contact page"
 draft: false
 ---
