@@ -1,0 +1,112 @@
+---
+import ShopCard from "@/components/ShopCard.astro";
+import Share from "@/components/Share.astro";
+import config from "@/config/config.json";
+import { getSinglePage } from "@/lib/contentParser.astro";
+import dateFormat from "@/lib/utils/dateFormat";
+import similerItems from "@/lib/utils/similarItems";
+import { humanize, markdownify, slugify } from "@/lib/utils/textConverter";
+import { Image } from "@astrojs/image/components";
+import {
+  FaTag,
+  FaRegClock,
+  FaRegFolder,
+} from "react-icons/fa/index.js";
+
+import type { SnipcartProduct, ProductMeta } from '@lloydjatkinson/astro-snipcart';
+import { Product } from '@lloydjatkinson/astro-snipcart/astro';
+            
+type Props = SnipcartProduct & ProductMeta;
+const product = Astro.props.content as Props;
+
+const { shop_folder } = config.settings;
+const posts = await getSinglePage(shop_folder);
+const { post } = Astro.props;
+const { Content } = await post.render();
+const { id, title, description, author, price, sale, currency, categories, image, date, tags } = post.data;
+const similarPosts = similerItems(post, posts, post.slug);
+
+---
+
+<section class="section pt-7">
+  <div class="container">
+    <article class="row justify-center">
+      <div class="mb:md-0 mb-6 md:col-5">
+        {
+          image && (
+            <div class="mb-10">
+              <Image
+                src={image}
+                height={500}
+                width={600}
+                alt={title}
+                class="object-contain rounded"
+                format="webp"
+              />
+            </div>
+          )
+        }
+        <ul class="mb-4">
+          <li class="mr-4 inline-block">
+            <FaRegFolder className={"mr-2 -mt-1 inline-block"} />
+            {
+              categories.map((category: string, index: number) => (
+                <a href={`/categories/${slugify(category)}`}>
+                  {humanize(category)}
+                  {index !== categories.length - 1 && ","}
+                </a>
+              ))
+            }
+          </li>
+        </ul>
+      </div>
+      <div class="mb:md-0 mb-6 md:col-5">
+        <h1 set:html={markdownify(title)} class="h2 mb-4" />
+        <h3 set:html={price} class="h3 mb-4" />
+        <Product
+          as="span"
+          id={id}
+          name={title}
+          url="/product/standard-t-shirt"
+          price={price}
+          description={description}
+          image={image} >
+          <button class="btn btn-primary">
+              Add to cart
+          </button>
+      </Product>
+        <!--
+        <button >
+          Add to Cart
+        </button> -->
+        <div class="content mb-10">
+          <Content />
+        </div>
+        <div class="row items-start justify-between">
+            <h5 class="mr-3">Share :</h5>
+            <Share
+              className="social-icons"
+              title={title}
+              description={description}
+              slug={post.slug}
+            />
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Related posts -->
+    <div class="section pb-0">
+      <h2 class="h3 mb-12 text-center">Related Product</h2>
+      <div class="row justify-center">
+        {
+          similarPosts.map((post) => (
+            <div class="lg:col-4">
+              <ShopCard data={post} />
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>

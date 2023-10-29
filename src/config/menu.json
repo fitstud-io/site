@@ -1,0 +1,42 @@
+{
+  "main": [
+    {
+      "name": "Fitness",
+      "url": "/categories/fitness"
+    },
+    {
+      "name": "Nutrition",
+      "url": "/categories/nutrition"
+    },
+    {
+      "name": "Mindset",
+      "url": "/categories/mindset"
+    },
+    {
+      "name": "Shop",
+      "url": "/shop"
+    }
+  ],
+  "footer": [
+    {
+      "name": "Blog",
+      "url": "/blog"
+    },
+    {
+      "name": "About",
+      "url": "/about"
+    },
+    {
+      "name": "Contact",
+      "url": "/contact"
+    },
+    {
+      "name": "Privacy",
+      "url": "/privacy-policy"
+    },
+    {
+      "name": "RSS",
+      "url": "/rss.xml"
+    }
+  ]
+}
