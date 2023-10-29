@@ -1,8 +1,8 @@
 ---
 # Banner
 banner:
-  title: "The Ultimate Starter Guide You Need To Adventure"
-  content: "The essential step to take before embarking on any journey is to conduct thorough research. <i>Always do your research!</i> Fortunately, I'm sharing all of my notes and providing solutions to the entire assessment. I'm gathering all of my outdoor-related research and expertise, and presenting it on this platform for you to freely access, learn from, and utilize."
+  title: "The Ultimate Fitness Guide: Your Path to Health & Vitality"
+  content: "Are you ready to take charge of your fitness journey? Join us as we explore workouts, nutrition, motivation, and so much more. Whether you're just beginning or a seasoned fitness enthusiast, our mission is to provide you with expert insights, research-backed information, and practical tips to help you achieve your fitness goals."
   image: "/images/banner.png"
   button:
     enable: true
@@ -11,40 +11,40 @@ banner:
 
 # Features
 features:
-# 1 Backpacking
-  - title: "Want to start backpacking?"
-    image: "/images/blog/backpacking_photography.webp"
-    content: "Backpacking is an adventurous way of traveling for those interested in exploring new places, activities, and people on a budget. Before you start and even if you are a veteran, you need to do your research."
+# 1 Fitness
+  - title: "Find Your Fitness Potential"
+    image: "/images/fitness.webp"
+    content: "Embark on a journey of self-discovery, transformation, and the pursuit of strength. In the realm of health and fitness, there exists a profound truth: the potential to unlock your best self lies within."
     bulletpoints:
-      - "Read about the risks and taking care of yourself. That includes booking a bed, seeking information, and sorting out your meals and transportation."
-      - "We discuss experiencing different countries, and cultures, meeting new and interesting people"
-      - "Be smart in packing your stuff. You might want to save space and reduce the weight of your backpack."
+      - "Discover advanced workout methods and training strategies to take your fitness to the next level."
+      - "Understand the importance of recovery, sleep, and holistic well-being in achieving long-term fitness success."
+      - "Explore strategies for building lasting habits and maintaining consistency in your fitness routine."
     button:
       enable: true
-      label: "Vist Backpacking ➜"
-      link: "/categories/backpacking"
-#  Camping
-  - title: "Everthing about camping!"
-    image: "/images/blog/camping_mountains_tent.webp"
-    content: "Camping knowledge goes beyond mere survival skills. It's about learning to appreciate the quiet beauty of untouched landscapes, discovering the mesmerizing dance of stars in the night sky."
+      label: "Vist Fitness ➜"
+      link: "/categories/fitness"
+#  Nutrition
+  - title: "The Art of Nutrition"
+    image: "/images/nutrition.webp"
+    content: "Unlock the transformative power of nutrition in your fitness journey. Whether you're an athlete or just beginning, we're here to guide you through the realm of nutrient-rich eating, effective meal planning, and the knowledge that achieving your fitness goals starts at your plate."
     bulletpoints:
-      - "Learn how to develope a sense of self-reliance that boosts confidence and problem-solving abilities"
-      - "Acquiring knowledge about Leave No Trace principles instills a sense of responsibility for preserving the environment for future generations."
-      - "You'll find a wealth of resources available, from guidebooks and online tutorials to hands-on workshops and outdoor clubs."
+      - "Optimize your nutrition to boost workout energy, expedite recovery, and support muscle growth."
+      - "nderstand the roles of macronutrients and micronutrients in your fitness journey."
+      - "Master the art of creating balanced meals that align with your fitness goals and daily life."
     button:
       enable: true
-      label: "Visit Camping ➜"
-      link: "/categories/camping"
-#3 Kayaking
-  - title: "Your guide to kayak camping trips and adventuring!"
-    image: "/images/blog/kayak.webp"
-    content: "Kayaking is more than just paddling across serene waters – it's about mastering the art of maneuvering through currents, waves, and tides, and immersing oneself in the beauty of coastal landscapes, lakes, and rivers."
+      label: "Visit Nutrition ➜"
+      link: "/categories/nutrition"
+#3 Mindset
+  - title: "Elevate Your Fitness Mindset"
+    image: "/images/mindset.webp"
+    content: "In the ever-changing fitness landscape, one constant guides your journey: your mindset. It acts as your unwavering determination to rise early for a workout, your resilience to conquer challenges, and your belief in your transformative potential."
     bulletpoints:
-      - "Acquire not only technical skills but also an intimate connection with water and the surrounding environment."
-      - "Learning the fundamentals of kayak camping involves understanding."
-      - "Get an understanding of safety protocols, navigation techniques, and weather conditions specific to water-based journeys."
+      - "How a positive mindset can break through plateaus and sustain success."
+      - "Strategies to conquer common mental barriers like self-doubt and lack of motivation."
+      - "Techniques to bolster mental resilience and maintain unwavering determination on your fitness journey."
     button:
       enable: true
-      label: "Visit Kayaking ➜"
-      link: "/categories/kayaking"
+      label: "Visit Mindset ➜"
+      link: "/categories/mindset"
 ---

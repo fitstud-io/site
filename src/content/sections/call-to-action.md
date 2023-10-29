@@ -1,10 +1,10 @@
 ---
 enable: true
-title: "Looking for gear tips and reviews?"
-image: "/images/blog/backpacking-gear.webp"
-description: "Every item of gear has been meticulously crafted to fulfill precise needs and purposes. Discover which gear meets the mark and which ones may fall short. Additionally, I'll make it a priority to help you find optimal value for your investment and share a handful of trade secrets to enhance your experience."
+title: "Don't wait - take the first step towards a stronger, healthier you."
+image: "/images/cta-shop.webp"
+description: "Explore our premium fitness supplements and top-quality gear to elevate your fitness journey. Whether you're a seasoned athlete or just starting, we have the tools and products to help you achieve your goals."
 button:
   enable: true
-  label: "Get Started Now with Gear ➜"
-  link: "/tags/gear"
+  label: "Get Supplements & Fitness Gear ➜"
+  link: "/shop"
 ---
