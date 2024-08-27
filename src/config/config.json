@@ -1,50 +1,35 @@
 {
   "site": {
-    "title": "fitstud.io",
+    "title": "FIRSTUD.IO",
     "base_url": "https://fitstud.io",
     "base_path": "/",
     "trailing_slash": false,
-    "favicon": "/favicon.png",
-    "logo_text": "fitstud.io"
-  },
-
-  "metaSite": {
-    "title": "fitstud.io",
-    "description": "I'm a fitness enthusiast, and all around gear nerd.",
-    "base_url": "https://fitstud.io"
+    "favicon": "/images/favicon.svg",
+    "logo": "/images/logo.svg",
+    "logo_width": "36",
+    "logo_height": "36",
+    "logo_text": "FITSTUD.IO"
   },
 
   "settings": {
-    "search": true,
-    "sticky_header": true,
-    "theme_switcher": true,
-    "default_theme": "system",
-    "pagination": 6,
-    "summary_length": 200,
-    "blog_folder": "blog",
-    "shop_folder": "shop"
+    "pagination": 5,
+    "summary_length": 100
+  },
+
+  "metadata": {
+    "meta_author": "FIRSTUD",
+    "meta_image": "/images/og-image.png",
+    "meta_description": "FIRSTUD.IO fitness blog"
   },
 
   "params": {
     "contact_form_action": "#",
-    "copyright": "Designed And Developed by [fitstud.io](https://fitstud.io)"
+    "copyright": "Copyright © 2023 [FITSTUD.IO](https://fitstud.io)"
   },
 
-  "navigation_button": {
-    "enable": false,
-    "label": "Get Started",
-    "link": "https://github.com/zeon-studio/astroplate"
-  },
-
-  "disqus": {
-    "enable": true,
-    "shortname": "themefisher-template",
-    "settings": {}
-  },
-
-  "metadata": {
-    "meta_author": "fitstud.io",
-    "meta_image": "/images/og-image.png",
-    "meta_description": "A blog about my fitness and all the gear that goes with. Read gear reviews and latest posts"
+  "contactinfo": {
+    "address": "355 S Grand Ave <br/> Los Angeles, CA 90071",
+    "email": "info@fitstud.io",
+    "phone": "+800 567 1234"
   }
 }

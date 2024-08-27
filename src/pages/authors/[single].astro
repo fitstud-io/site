@@ -1,16 +1,18 @@
 ---
-import BlogCard from "@/components/BlogCard.astro";
-import Social from "@/components/Social.astro";
-import config from "@/config/config.json";
+import { Image } from "astro:assets";
+import AuthorSingle from "@/layouts/AuthorSingle.astro";
 import Base from "@/layouts/Base.astro";
 import { getSinglePage } from "@/lib/contentParser.astro";
-import { slugify } from "@/lib/utils/textConverter";
-import { Image } from "@astrojs/image/components";
+import dateFormat from "@/lib/utils/dateFormat";
+
+import { sortByDate } from "@/lib/utils/sortFunctions";
+import { humanize, slugify } from "@/lib/utils/textConverter";
+import { BiCalendarEdit, BiCategoryAlt } from "react-icons/bi";
 
 export async function getStaticPaths() {
   const authors = await getSinglePage("authors");
 
-  const paths = authors.map((author) => ({
+  const paths = authors.map((author: any) => ({
     params: {
       single: author.slug,
     },
@@ -19,14 +21,17 @@ export async function getStaticPaths() {
   return paths;
 }
 
-const { blog_folder }: { blog_folder: string } = config.settings;
 const { author } = Astro.props;
-const { title, social, meta_title, description, image } = author.data;
-const { Content } = await author.render();
-const posts = await getSinglePage(blog_folder);
-const postFilterByAuthor = posts.filter(
-  (post) => slugify(post.data.author) === slugify(title),
-);
+const { title, meta_title, description, image } = author.data;
+
+// Author Posts
+const posts = await getSinglePage("posts");
+const sortPostsByDate = sortByDate(posts);
+const currentPosts = sortPostsByDate.filter((post) => {
+  return post.data.authors
+    .map((author: string) => slugify(author))
+    .includes(slugify(title));
+});
 ---
 
 <Base
@@ -35,41 +40,71 @@ const postFilterByAuthor = posts.filter(
   description={description}
   image={image}
 >
-  <section class="section-sm pb-0">
-    <div class="container">
-      <div
-        class="row justify-center border-b border-border pb-14 dark:border-darkmode-border"
-      >
-        <div class="text-center lg:col-4">
-          {
-            image && (
-              <Image
-                src={image}
-                class="mx-auto mb-10 rounded"
-                height={200}
-                width={200}
-                alt={title}
-                format="webp"
-              />
-            )
-          }
-          <h1 class="h3 mb-6">{title}</h1>
-          <div class="content">
-            <Content />
-          </div>
-          <Social source={social} className="social-icons" />
-        </div>
-      </div>
+  <AuthorSingle author={author} />
 
-      <div class="row justify-center pb-16 pt-14">
-        {
-          postFilterByAuthor.map((post) => (
-            <div class="mb-12 md:col-6 lg:col-4">
-              <BlogCard data={post} />
-            </div>
-          ))
-        }
-      </div>
-    </div>
-  </section>
+  {
+    currentPosts.length > 0 && (
+      <section class="section pt-0">
+        <div class="container">
+          <h2 class="mb-8 text-center h3">Recent Posts</h2>
+          <div
+            class={`row gy-4 ${currentPosts.length < 3 ? "justify-center" : ""}`}
+          >
+            {currentPosts.map((post: any, i: number) => (
+              <div class="col-12 sm:col-6 lg:col-4">
+                {post.data.image && (
+                  <a
+                    href={`/${post.slug}`}
+                    class="rounded-lg block hover:text-primary overflow-hidden group"
+                  >
+                    <Image
+                      class="group-hover:scale-[1.05] transition duration-300 w-full"
+                      src={post.data.image}
+                      alt={post.data.title}
+                      width={445}
+                      height={230}
+                    />
+                  </a>
+                )}
+                <ul class="mt-4 text-text flex flex-wrap items-center text-sm">
+                  <li class="mb-2 mr-4 flex items-center flex-wrap font-medium">
+                    <BiCalendarEdit className="mr-1 h-[16px] w-[16px] text-gray-600" />
+                    <>{dateFormat(post.data.date)}</>
+                  </li>
+                  <li class="mb-2 mr-4 flex items-center flex-wrap">
+                    <BiCategoryAlt className="mr-1 h-[16px] w-[16px] text-gray-600" />
+                    <>
+                      <ul>
+                        {post.data.categories.map(
+                          (category: string, i: number) => (
+                            <li class="inline-block">
+                              <a
+                                href={`/categories/${slugify(category)}`}
+                                class="mr-2 hover:text-primary font-medium"
+                              >
+                                {humanize(category)}
+                                {i !== post.data.categories.length - 1 && ","}
+                              </a>
+                            </li>
+                          ),
+                        )}
+                      </ul>
+                    </>
+                  </li>
+                </ul>
+                <h3 class="h5">
+                  <a
+                    href={`/${post.slug}`}
+                    class="block hover:text-primary transition duration-300"
+                  >
+                    {post.data.title}
+                  </a>
+                </h3>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    )
+  }
 </Base>

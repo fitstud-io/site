@@ -1,116 +1,135 @@
 ---
-import BlogCard from "@/components/BlogCard.astro";
+import { Image } from "astro:assets";
 import Share from "@/components/Share.astro";
-import config from "@/config/config.json";
-import Disqus from "@/helpers/Disqus";
+import SimilarPosts from "@/components/SimilarPosts.astro";
 import { getSinglePage } from "@/lib/contentParser.astro";
 import dateFormat from "@/lib/utils/dateFormat";
 import similerItems from "@/lib/utils/similarItems";
 import { humanize, markdownify, slugify } from "@/lib/utils/textConverter";
-import { Image } from "@astrojs/image/components";
-import {
-  FaRegClock,
-  FaRegFolder,
-  FaRegUserCircle,
-} from "react-icons/fa/index.js";
+import { BiCalendarEdit, BiCategoryAlt } from "react-icons/bi";
 
-const { blog_folder } = config.settings;
-const posts = await getSinglePage(blog_folder);
+const allAuthors = await getSinglePage("authors");
+const posts = await getSinglePage("posts");
 const { post } = Astro.props;
 const similarPosts = similerItems(post, posts, post.slug);
 const { Content } = await post.render();
-const { title, description, author, categories, image, date, tags } = post.data;
+const { title, description, authors, categories, image, date, tags } =
+  post.data;
 ---
 
-<section class="section pt-7">
+<section class="section">
   <div class="container">
-    <div class="row justify-center">
-      <article class="lg:col-10">
-        {
-          image && (
-            <div class="mb-10">
-              <Image
-                src={image}
-                height={500}
-                width={1200}
-                alt={title}
-                class="w-full rounded"
-                format="webp"
-              />
-            </div>
-          )
-        }
-        <h1 set:html={markdownify(title)} class="h2 mb-4" />
-        <ul class="mb-4">
-          <li class="mr-4 inline-block">
-            <a href={`/authors/${slugify(author)}`}>
-              <FaRegUserCircle className={"mr-2 -mt-1 inline-block"} />
-              {humanize(author)}
-            </a>
-          </li>
-          <li class="mr-4 inline-block">
-            <FaRegFolder className={"mr-2 -mt-1 inline-block"} />
+    <article class="row justify-center">
+      <div class="md:col-10 text-center">
+        <h1 set:html={markdownify(title)} class="h2" />
+        <ul class="mt-4 flex flex-wrap items-center justify-center text-text">
+          <li class="mx-3">
             {
-              categories.map((category: string, index: number) => (
-                <a href={`/categories/${slugify(category)}`}>
-                  {humanize(category)}
-                  {index !== categories.length - 1 && ","}
-                </a>
-              ))
+              allAuthors
+                .filter((author) =>
+                  authors
+                    .map((author: string) => slugify(author))
+                    .includes(slugify(author.data.title)),
+                )
+                .map((author, i) => (
+                  <a
+                    href={`/authors/${slugify(author.slug)}`}
+                    class="flex items-center hover:text-primary font-medium"
+                  >
+                    {author.data.image && (
+                      <Image
+                        src={author.data.image}
+                        alt={author.data.title}
+                        height={50}
+                        width={50}
+                        class="mr-2 h-6 w-6 rounded-full"
+                      />
+                    )}
+                    <span>{author.data.title}</span>
+                  </a>
+                ))
             }
           </li>
-          <li class="mr-4 inline-block">
-            <FaRegClock className={"mr-2 -mt-1 inline-block"} />
-            {dateFormat(date)}
+          <li class="mx-3 flex items-center flex-wrap font-medium">
+            <BiCalendarEdit className="mr-1 h-5 w-5 text-gray-600" />
+            <>{dateFormat(date)}</>
+          </li>
+          <li class="mx-3 flex items-center flex-wrap">
+            <BiCategoryAlt className="mr-1 h-[18px] w-[18px] text-gray-600" />
+            <>
+              <ul>
+                {
+                  categories.map((category: string, i: number) => (
+                    <li class="inline-block">
+                      <a
+                        href={`/categories/${slugify(category)}`}
+                        class="mr-2 hover:text-primary font-medium"
+                      >
+                        {humanize(category)}
+                        {i !== post.data.categories.length - 1 && ","}
+                      </a>
+                    </li>
+                  ))
+                }
+              </ul>
+            </>
           </li>
         </ul>
-        <div class="content mb-10">
-          <Content />
-        </div>
-        <div class="row items-start justify-between">
-          <div class="mb-10 flex items-center lg:col-5 lg:mb-0">
-            <h5 class="mr-3">Tags :</h5>
-            <ul>
-              {
-                tags.map((tag: string) => (
-                  <li class="inline-block">
-                    <a
-                      class="m-1 block rounded bg-theme-light px-3 py-1 hover:bg-primary hover:text-white dark:bg-darkmode-theme-light dark:hover:bg-darkmode-primary dark:hover:text-dark"
-                      href={`/tags/${slugify(tag)}`}
-                    >
-                      {humanize(tag)}
-                    </a>
-                  </li>
-                ))
-              }
-            </ul>
-          </div>
-          <div class="flex items-center lg:col-4">
-            <h5 class="mr-3">Share :</h5>
-            <Share
-              className="social-icons"
-              title={title}
-              description={description}
-              slug={post.slug}
-            />
-          </div>
-        </div>
-        <Disqus className="mt-20" client:load />
-      </article>
-    </div>
+      </div>
 
-    <!-- Related posts -->
-    <div class="section pb-0">
-      <h2 class="h3 mb-12 text-center">Related Posts</h2>
-      <div class="row justify-center">
+      <div class="col-12 mt-8 mb-2">
         {
-          similarPosts.map((post) => (
-            <div class="lg:col-4">
-              <BlogCard data={post} />
-            </div>
-          ))
+          image && (
+            <Image
+              src={image}
+              height={500}
+              width={1000}
+              alt={title}
+              class="rounded-lg"
+            />
+          )
         }
       </div>
-    </div>
+
+      <div class="md:col-10">
+        <div class="content mb-16 text-left">
+          <Content />
+        </div>
+        <div class="flex flex-wrap items-center justify-between">
+          <ul class="mr-4 mb-4 space-x-3">
+            {
+              tags.map((tag: string) => (
+                <li class="inline-block">
+                  <a
+                    href={`/tags/${slugify(tag)}`}
+                    class="block rounded-lg bg-theme-light px-4 py-2 font-semibold text-dark text-sm hover:text-primary transition duration-300"
+                  >
+                    #{humanize(tag)}
+                  </a>
+                </li>
+              ))
+            }
+          </ul>
+          <Share
+            className="social-share mb-4"
+            title={title}
+            description={description}
+            slug={post.slug}
+          />
+        </div>
+      </div>
+    </article>
   </div>
 </section>
+
+<!-- similar posts -->
+{
+  similarPosts.length > 0 && (
+    <section class="section pt-0">
+      <div class="container">
+        <h2 class="mb-8 text-center h3">Similar Posts</h2>
+        <SimilarPosts posts={similarPosts.slice(0, 3)} />
+      </div>
+    </section>
+  )
+}

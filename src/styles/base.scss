@@ -3,7 +3,7 @@ html {
 }
 
 body {
-  @apply bg-body font-primary font-normal leading-relaxed text-text dark:bg-darkmode-body dark:text-darkmode-text;
+  @apply bg-body font-secondary font-light leading-relaxed text-text;
 }
 
 h1,
@@ -12,7 +12,7 @@ h3,
 h4,
 h5,
 h6 {
-  @apply font-secondary font-bold leading-tight text-dark dark:text-darkmode-dark;
+  @apply font-primary font-light leading-tight text-dark;
 }
 
 h1,
@@ -32,24 +32,18 @@ h3,
 
 h4,
 .h4 {
-  @apply text-h4 font-medium;
+  @apply text-h4;
 }
 
 h5,
 .h5 {
-  @apply text-h5 font-medium;
+  @apply text-h5;
 }
 
 h6,
 .h6 {
-  @apply text-h6 font-medium;
+  @apply text-h6;
 }
-
-b,
-strong {
-  @apply font-semibold;
-}
-
-code {
-  @apply after:border-none;
+.navbar-brand {
+  @apply text-2xl font-primary;
 }

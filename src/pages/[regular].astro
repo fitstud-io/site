@@ -1,12 +1,19 @@
 ---
 import Base from "@/layouts/Base.astro";
+import Default from "@/layouts/Default.astro";
+import PostSingle from "@/layouts/PostSingle.astro";
 import { getSinglePage } from "@/lib/contentParser.astro";
-import PageHeader from "@/partials/PageHeader.astro";
+import type { TPost } from "@/types";
+
+const getPosts = (await getSinglePage("posts")) as TPost[];
+const postsSlug = getPosts.map((item) => item.slug);
 
 export async function getStaticPaths() {
+  const posts = await getSinglePage("posts");
   const pages = await getSinglePage("pages");
+  const allPages = [...pages, ...posts];
 
-  const paths = pages.map((page) => ({
+  const paths = allPages.map((page: any) => ({
     params: {
       regular: page.slug,
     },
@@ -17,7 +24,6 @@ export async function getStaticPaths() {
 
 const { page } = Astro.props;
 const { title, meta_title, description, image } = page.data;
-const { Content } = await page.render();
 ---
 
 <Base
@@ -26,16 +32,11 @@ const { Content } = await page.render();
   description={description}
   image={image}
 >
-  <PageHeader title={title} />
-  <section class="section-sm">
-    <div class="container">
-      <div class="row justify-center">
-        <div class="lg:col-10">
-          <div class="content">
-            <Content />
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  {
+    postsSlug.includes(page.slug) ? (
+      <PostSingle post={page} />
+    ) : (
+      <Default data={page} />
+    )
+  }
 </Base>

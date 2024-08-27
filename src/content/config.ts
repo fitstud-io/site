@@ -1,37 +1,17 @@
 import { defineCollection, z } from "astro:content";
 
 // Post collection schema
-const blogCollection = defineCollection({
+const postsCollection = defineCollection({
   schema: z.object({
-    id: z.string(),
-    title: z.string(),
-    description: z.string().optional(),
-    date: z.date().optional(),
-    image: z.string().optional(),
-    author: z.string().default("Admin"),
-    categories: z.array(z.string()).default(["others"]),
-    tags: z.array(z.string()).default(["others"]),
-    canonical: z.string().optional(),
-    draft: z.boolean().optional(),
-  }),
-});
-
-// Shop collection schema
-const shopCollection = defineCollection({
-  schema: z.object({
-    id: z.string(),
+    id: z.string().optional(),
     title: z.string(),
     meta_title: z.string().optional(),
     description: z.string().optional(),
     date: z.date().optional(),
-    price: z.number().multipleOf(0.01).default(9.99),
-    sale: z.number().optional(),
-    currency: z.string().default("USD"),
     image: z.string().optional(),
-    // author: z.string().default("Admin"),
+    authors: z.array(z.string()).default(["admin"]),
     categories: z.array(z.string()).default(["others"]),
     tags: z.array(z.string()).default(["others"]),
-    canonical: z.string().default("shop/"),
     draft: z.boolean().optional(),
   }),
 });
@@ -39,21 +19,17 @@ const shopCollection = defineCollection({
 // Author collection schema
 const authorsCollection = defineCollection({
   schema: z.object({
+    id: z.string().optional(),
     title: z.string(),
     meta_title: z.string().optional(),
-    email: z.string().optional(),
     image: z.string().optional(),
     description: z.string().optional(),
     social: z
-      .array(
-        z
-          .object({
-            name: z.string().optional(),
-            icon: z.string().optional(),
-            link: z.string().optional(),
-          })
-          .optional(),
-      )
+      .object({
+        facebook: z.string().optional(),
+        twitter: z.string().optional(),
+        instagram: z.string().optional(),
+      })
       .optional(),
     draft: z.boolean().optional(),
   }),
@@ -62,18 +38,19 @@ const authorsCollection = defineCollection({
 // Pages collection schema
 const pagesCollection = defineCollection({
   schema: z.object({
+    id: z.string().optional(),
     title: z.string(),
     meta_title: z.string().optional(),
     description: z.string().optional(),
     image: z.string().optional(),
+    layout: z.string().optional(),
     draft: z.boolean().optional(),
   }),
 });
 
 // Export collections
 export const collections = {
-  blog: blogCollection,
-  shop: shopCollection,
-  authors: authorsCollection,
+  posts: postsCollection,
   pages: pagesCollection,
+  authors: authorsCollection,
 };

@@ -1,24 +1,30 @@
 {
-  "main": [
-    {
-      "name": "youtube",
-      "icon": "FaYoutube",
-      "link": "https://www.youtube.com/@fitstud"
-    },
-    {
-      "name": "instagram",
-      "icon": "FaInstagram",
-      "link": "https://www.instagram.com/fitstud.io"
-    },
-    {
-      "name": "twitter",
-      "icon": "FaX",
-      "link": "https://x.com/fitstud_io"
-    },
-    {
-      "name": "facebook",
-      "icon": "FaFacebook",
-      "link": "https://www.facebook.com/fitstud.io"
-    }
-  ]
+  "facebook": "https://facebook.com/",
+  "twitter": "https://x.com/fitstud_io",
+  "instagram": "https://instagram.com/fitstud.io",
+  "youtube": "https://youtube.com/@fitstud",
+  "linkedin": "",
+  "github": "",
+  "gitlab": "",
+  "medium": "",
+  "codepen": "",
+  "bitbucket": "",
+  "dribbble": "",
+  "behance": "",
+  "pinterest": "",
+  "soundcloud": "",
+  "tumblr": "",
+  "reddit": "",
+  "vk": "",
+  "whatsapp": "",
+  "snapchat": "",
+  "vimeo": "",
+  "tiktok": "",
+  "foursquare": "",
+  "rss": "",
+  "email": "",
+  "phone": "",
+  "address": "",
+  "skype": "",
+  "website": ""
 }

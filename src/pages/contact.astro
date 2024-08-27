@@ -1,12 +1,14 @@
 ---
-// import config from "@/config/config.json";
+import config from "@/config/config.json";
 import Base from "@/layouts/Base.astro";
-import PageHeader from "@/partials/PageHeader.astro";
+import { markdownify } from "@/lib/utils/textConverter";
 import { getEntryBySlug } from "astro:content";
+import { FaAddressCard, FaEnvelope, FaPhoneAlt } from "react-icons/fa";
 
-const contact = await getEntryBySlug("contact", "-index");
-// const { contact_form_action }: { contact_form_action: string } = config.params;
-const { title, description, meta_title, image } = contact.data;
+const entry = await getEntryBySlug("pages", "contact");
+const { contact_form_action } = config.params;
+const { address, email, phone } = config.contactinfo;
+const { title, description, meta_title, image } = entry.data;
 ---
 
 <Base
@@ -15,73 +17,61 @@ const { title, description, meta_title, image } = contact.data;
   description={description}
   image={image}
 >
-  <PageHeader title={title} />
-  <section class="section-sm">
+  <section class="section">
     <div class="container">
-      <div class="row">
-        <div class="mx-auto md:col-10 lg:col-6">
-          <form 
-            name="contact" 
-            method="POST"
-            action="/success"
-            data-netlify="true"
-            netlify-honeypot="bot-field"
-            onSubmit="submit"
-          >
-          <input 
-            id="bot-fields"
-            name="bot-field"
-            class="hidden" 
-            type="text"
-          />
-            <div class="mb-6">
-              <label for="name" class="form-label">
-                Full Name <span class="text-red-500">*</span>
-              </label>
-              <input
-                id="name"
-                name="name"
-                class="form-input"
-                placeholder="John Doe"
-                type="text"
-              />
+      <h1 set:html={markdownify(title)} class="h2 page-heading" />
+      <div class="row md:gx-5 gy-5">
+        <div class="sm:col-5 md:col-4">
+          <p class="mb-8 text-2xl font-bold text-theme-dark">Contact Info</p>
+          <ul class="flex flex-col space-y-8">
+            <li>
+              <div class="flex text-theme-dark items-center text-xl">
+                <FaAddressCard className="mr-3 text-primary" />
+                <p class="font-semibold">Address</p>
+              </div>
+              <p set:html={markdownify(address)} class="mt-2 leading-5 pl-8" />
+            </li>
+            <li>
+              <div class="flex text-theme-dark items-center text-xl">
+                <FaEnvelope className="mr-3 text-primary" />
+                <p class="font-semibold">Email</p>
+              </div>
+              <p set:html={markdownify(email)} class="mt-2 leading-5 pl-8 content" />
+            </li>
+            <li>
+              <div class="flex text-theme-dark items-center text-xl">
+                <FaPhoneAlt className="mr-3 text-primary" />
+                <p class="font-semibold">Phone</p>
+              </div>
+              <p set:html={markdownify(phone)} class="mt-2 leading-5 pl-8" />
+            </li>
+          </ul>
+        </div>
+        <div class="sm:col-7 md:col-8">
+          <form class="contact-form row gy-2 justify-center" method="POST" action={contact_form_action}>
+            <div class="lg:col-6">
+              <label class="mb-2 block" for="name">Name <span class="text-red-600">*</span></label>
+              <input class="form-input w-full" name="name" type="text" required />
             </div>
-            <div class="mb-6">
-              <label for="email" class="form-label">
-                Email <span class="text-red-500">*</span>
-              </label>
-              <input
-                id="email"
-                name="email"
-                class="form-input"
-                placeholder="john.doe@email.com"
-                type="email"
-              />
+            <div class="lg:col-6">
+              <label class="mb-2 block" for="email">Email <span class="text-red-600">*</span></label>
+              <input class="form-input w-full" name="email" type="email" required />
             </div>
-            <div class="mb-6">
-              <label for="subject" class="form-label">
-                Why are you here? <span class="text-red-500">*</span>
-              </label>
+            <div class="col-12">
+              <label class="mb-2 block" for="subject">Subject</label>
               <input
-                id="subject"
+                class="form-input w-full"
                 name="subject"
-                class="form-input"
-                placeholder="Want to collaborate or looking for an ambasador"
                 type="text"
               />
             </div>
-            <div class="mb-6">
-              <label for="message" class="form-label">
-                Anything else? <span class="text-red-500">*</span>
-              </label>
-              <textarea
-                id="message"
-                name="message"
-                class="form-input"
-                placeholder="Message goes here..."
-                rows="8"></textarea>
+            <div class="col-12">
+              <label class="mb-2 block" for="message">Message <span class="text-red-600">*</span></label>
+              <textarea class="form-textarea w-full" rows="4"></textarea>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <div class="col-12">
+              <button class="btn btn-primary mt-2">Submit Now</button>
+            </div>
           </form>
         </div>
       </div>

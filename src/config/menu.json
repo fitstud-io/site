@@ -11,17 +11,9 @@
     {
       "name": "Mindset",
       "url": "/categories/mindset"
-    },
-    {
-      "name": "Shop",
-      "url": "/shop"
     }
   ],
   "footer": [
-    {
-      "name": "Blog",
-      "url": "/blog"
-    },
     {
       "name": "About",
       "url": "/about"
@@ -31,12 +23,12 @@
       "url": "/contact"
     },
     {
-      "name": "Privacy",
-      "url": "/privacy-policy"
+      "name": "Elements",
+      "url": "/elements"
     },
     {
-      "name": "RSS",
-      "url": "/rss.xml"
+      "name": "Privacy Policy",
+      "url": "/privacy-policy"
     }
   ]
 }

@@ -1,7 +1,7 @@
 // similer products
 const similerItems = (currentItem: any, allItems: any, slug: string) => {
-  let categories: string[] = [];
-  let tags: string[] = [];
+  let categories: [] = [];
+  let tags: [] = [];
 
   // set categories
   if (currentItem.data.categories.length > 0) {
@@ -14,13 +14,14 @@ const similerItems = (currentItem: any, allItems: any, slug: string) => {
   }
 
   // filter by categories
-  const filterByCategories = allItems.filter((item: any) =>
-    categories.find((category) => item.data.categories.includes(category)),
+  const filterByCategories = allItems.filter(
+    (item: { data: { categories: string } }) =>
+      categories.find((category) => item.data.categories.includes(category))
   );
 
   // filter by tags
-  const filterByTags = allItems.filter((item: any) =>
-    tags.find((tag) => item.data.tags.includes(tag)),
+  const filterByTags = allItems.filter((item: { data: { tags: string } }) =>
+    tags.find((tag) => item.data.tags.includes(tag))
   );
 
   // merged after filter

@@ -1,27 +1,24 @@
 ---
-import AuthorCard from "@/components/AuthorCard.astro";
+import config from "@/config/config.json";
+import Authors from "@/layouts/Authors.astro";
 import Base from "@/layouts/Base.astro";
+import Pagination from "@/layouts/components/Pagination.astro";
 import { getSinglePage } from "@/lib/contentParser.astro";
-import PageHeader from "@/partials/PageHeader.astro";
-import { getEntryBySlug } from "astro:content";
+import { sortByDate } from "@/lib/utils/sortFunctions";
+import { markdownify } from "@/lib/utils/textConverter";
 
-const authorIndex = await getEntryBySlug<any, string>("authors", "-index");
 const authors = await getSinglePage("authors");
+const sortedPosts = sortByDate(authors);
+const totalPages = Math.ceil(authors.length / config.settings.pagination);
+const currentPosts = sortedPosts.slice(0, config.settings.pagination);
 ---
 
-<Base title={authorIndex.data.title}>
-  <PageHeader title={authorIndex.data.title} />
-  <section class="section-sm pb-0">
-    <div class="container">
-      <div class="row justify-center">
-        {
-          authors.map((author) => (
-            <div class="mb-14 md:col-6 lg:col-4">
-              <AuthorCard data={author} />
-            </div>
-          ))
-        }
-      </div>
+<Base title={"Authors"}>
+  <section class="section">
+    <div class="container text-center">
+      <h1 set:text={markdownify("Authors")} class="page-heading h2" />
+      <Authors authors={currentPosts} />
+      <Pagination section={"authors"} currentPage={1} totalPages={totalPages} />
     </div>
   </section>
 </Base>

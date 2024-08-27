@@ -1,20 +1,12 @@
-.bg-gradient {
-  @apply bg-gradient-to-b from-[rgba(249,249,249,1)] from-[0.53%] to-white to-[83.28%] dark:from-darkmode-theme-light dark:to-darkmode-body;
+b,
+strong {
+  @apply font-semibold;
 }
 
-.rounded-sm {
-  @apply rounded-[4px];
-}
-.rounded {
-  @apply rounded-[6px];
-}
-.rounded-lg {
-  @apply rounded-[12px];
-}
-.rounded-xl {
-  @apply rounded-[16px];
+img {
+  @apply inline-block;
 }
 
 .shadow {
-  box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 30px rgb(22 28 45 / 10%);
 }
