@@ -16,6 +16,10 @@
   }
 }
 
+.page-404 {
+  @apply bg-cover bg-[url('/images/404.jpeg')];
+  text-shadow: white 1px 1px;
+}
 // form style
 .form-inputs * {
   @apply mb-5 leading-10;
@@ -46,7 +50,7 @@
   li {
     @apply inline-block;
     a {
-      @apply block h-11 w-11 rounded-full border border-light bg-transparent text-center text-white transition hover:border-primary hover:bg-primary;
+      @apply block h-11 w-11 rounded-full border border-light bg-transparent text-center hover:text-white transition hover:border-primary hover:bg-primary;
       svg {
         @apply m-auto h-11 text-base;
       }

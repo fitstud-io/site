@@ -1,9 +1,8 @@
 {
   "name": "fitstud.io",
-  "version": "0.1.1",
+  "version": "2.0.0",
   "description": "Theme for fitstud.io",
   "author": "Damien Wright",
-  "version": "2.0.0",
   "license": "MIT",
   "scripts": {
     "dev": "astro dev",

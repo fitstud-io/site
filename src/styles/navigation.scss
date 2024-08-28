@@ -12,15 +12,15 @@ input#nav-toggle:checked ~ #nav-menu {
 }
 
 .header {
-  @apply fixed flex-nowrap top-0 z-10 w-full items-center pt-0 lg:pt-6;
+  @apply fixed flex-nowrap top-0 z-10 w-full items-center pt-0;
 }
 // navbar items
 .navbar {
-  @apply relative flex w-full items-center justify-between bg-white md:shadow-md;
+  @apply relative flex w-full h-20 items-center justify-between bg-white bg-opacity-85 border-white border-b px-4 backdrop-blur-md sm:px-6 lg:px-8 md:shadow-md;
 }
 
 .navbar-brand img {
-  @apply h-auto max-w-[170px] sm:h-auto sm:max-w-full #{!important};
+  @apply h-auto sm:h-auto sm:max-w-full #{!important};
 }
 
 .navbar-nav {
