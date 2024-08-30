@@ -2,6 +2,7 @@
 import config from "@/config/config.json";
 import Base from "@/layouts/Base.astro";
 import Pagination from "@/layouts/components/Pagination.astro";
+import Featured from "@/layouts/components/Featured.astro";
 import Posts from "@/layouts/Posts.astro";
 import { getSinglePage } from "@/lib/contentParser.astro";
 import { sortByDate } from "@/lib/utils/sortFunctions";
@@ -13,10 +14,20 @@ const currentPosts = sortedPosts.slice(0, config.settings.pagination);
 ---
 
 <Base>
-  <section class="section">
-    <div class="container">
-      <Posts posts={currentPosts} className="mb-16" />
-      <Pagination currentPage={1} totalPages={totalPages} />
+  <section class="bg-gray-50 pt-12 sm:pt-16 lg:pt-20">
+    <div
+      class="mx-auto max-w-2xl px-4 sm:px-6 lg:flex lg:max-w-screen-2xl lg:items-start lg:px-8"
+    >
+      <!-- Home Hero-->
+      <div class="relative lg:sticky lg:top-28 lg:w-1/2">
+        <Featured posts={currentPosts} className="mb-16" />
+      </div>
+      <!-- Recent Articles-->
+      <div class="mt-12 sm:mt-16 lg:ml-12 lg:mt-0 lg:w-1/2 xl:ml-16">
+        <h1 class="h3 text-left text-primary">Resent stories</h1>
+        <Posts posts={currentPosts} className="mb-16" />
+        <!-- <Pagination currentPage={1} totalPages={totalPages} /> -->
+      </div>
     </div>
   </section>
 </Base>

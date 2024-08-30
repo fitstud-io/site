@@ -15,11 +15,12 @@ const { className, posts, fluid } = Astro.props;
 >
   {
     posts.map((post: any, i: number) => (
-      <div class={i === 0 && fluid != false ? "col-12" : "col-12 sm:col-6"}>
+
+      <article class={i === 0 && fluid != false ? "invisible hidden h-0 m0 p-0" : "border-t border-gray-300/70 py-8 sm:flex lg:flex-col lg:border-t-0 xl:flex-row xl:items-center xl:border-t"}>
         {post.data.image && (
           <a
             href={`/${post.slug}`}
-            class="rounded-lg block hover:text-primary overflow-hidden group"
+            class="rounded-lg block hover:text-primary overflow-hidden group order-2 w-full sm:w-2/5 lg:order-1 lg:w-full xl:w-2/5"
           >
             <Image
               class="group-hover:scale-[1.03] transition duration-300 w-full"
@@ -30,56 +31,12 @@ const { className, posts, fluid } = Astro.props;
             />
           </a>
         )}
-        <ul class="mt-6 mb-4 flex flex-wrap items-center text-text">
-          <li class="mr-5">
-            {authors
-              .filter((author) =>
-                post.data.authors
-                  .map((author: string) => slugify(author))
-                  .includes(slugify(author.data.title))
-              )
-              .map((author) => (
-                <a
-                  href={`/authors/${slugify(author.data.title)}`}
-                  class="flex items-center hover:text-primary font-medium"
-                >
-                  {author.data.image && (
-                    <Image
-                      src={author.data.image}
-                      alt={author.data.title}
-                      height={50}
-                      width={50}
-                      class="mr-2 h-6 w-6 rounded-full"
-                    />
-                  )}
-                  <span>{author.data.title}</span>
-                </a>
-              ))}
-          </li>
-          <li class="mr-5 flex items-center flex-wrap font-medium">
-            <BiCalendarEdit className="mr-1 h-5 w-5 text-gray-600" />
-            <>{dateFormat(post.data.date)}</>
-          </li>
-          <li class="mr-5 flex items-center flex-wrap">
-            <BiCategoryAlt className="mr-1 h-[18px] w-[18px] text-gray-600" />
-            <>
-              <ul>
-                {post.data.categories.map((category: string, i: number) => (
-                  <li class="inline-block">
-                    <a
-                      href={`/categories/${slugify(category)}`}
-                      class="mr-2 hover:text-primary font-medium"
-                    >
-                      {humanize(category)}
-                      {i !== post.data.categories.length - 1 && ","}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </>
-          </li>
-        </ul>
-        <h3 class="mb-4">
+
+        {/* <!-- Content --> */}
+        <div
+          class="order-1 mt-5 w-full px-2 sm:mt-0 sm:max-w-sm sm:pl-0 sm:pr-5 lg:order-2 lg:mt-4 xl:ml-5 xl:mt-0 xl:flex-1"
+        >
+        <h3 class="h5 mb-4">
           <a
             href={`/${post.slug}`}
             class="block hover:text-primary transition duration-300"
@@ -98,7 +55,57 @@ const { className, posts, fluid } = Astro.props;
           )}
           ...
         </p>
-      </div>
+        </div>
+      </article>
+      <ul class={i === 0 && fluid != false ? "invisible hidden h-0 m0 p-0" : "m-0 flex flex-wrap items-center text-text"}>
+          <li class="mr-5 flex items-center flex-wrap">
+            {/* <BiCategoryAlt className="mr-1 h-[18px] w-[18px] text-gray-600" /> */}
+            <>
+              <ul>
+                {post.data.categories.map((category: string, i: number) => (
+                  <li class="inline-block">
+                    <a
+                      href={`/categories/${slugify(category)}`}
+                      class="mr-2 text-primary font-medium"
+                    >
+                      {humanize(category)}
+                      {i !== post.data.categories.length - 1 && ","}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </>
+          </li>
+          <li class="mr-5">
+            {authors
+              .filter((author) =>
+                post.data.authors
+                  .map((author: string) => slugify(author))
+                  .includes(slugify(author.data.title))
+              )
+              .map((author) => (
+                <a
+                  href={`/authors/${slugify(author.data.title)}`}
+                  class="flex items-center hover:text-primary font-thin text-sm capitalize"
+                >
+                  {author.data.image && (
+                    <Image
+                      src={author.data.image}
+                      alt={author.data.title}
+                      height={50}
+                      width={50}
+                      class="mr-2 h-6 w-6 rounded-full"
+                    />
+                  )}
+                  <span>by {author.data.title}</span>
+                </a>
+              ))}
+          </li>
+          <li class="mr-5 flex items-center flex-wrap font-thin text-sm">
+            {/* <BiCalendarEdit className="mr-1 h-5 w-5 text-gray-600" /> */}
+            <>{dateFormat(post.data.date)}</>
+          </li>
+        </ul>
     ))
   }
 </div>

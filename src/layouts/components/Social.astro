@@ -35,6 +35,13 @@ import {
   IoMail,
 } from "react-icons/io5";
 
+import {
+  FaFacebook,
+  FaInstagram,
+  FaXTwitter,
+  FaYoutube,
+} from "react-icons/fa6";
+
 const {
   facebook,
   twitter,
@@ -67,10 +74,53 @@ const {
   address,
   skype,
   website,
+  xtwitter,
 } = source;
 ---
 
 <ul class={className}>
+  {
+    instagram && (
+      <li class="inline-block">
+        <a
+          aria-label="instagram"
+          href={instagram}
+          target="_blank"
+          rel="noopener noreferrer nofollow"
+        >
+          <FaInstagram />
+        </a>
+      </li>
+    )
+  }
+  {
+    youtube && (
+      <li class="inline-block">
+        <a
+          aria-label="youtube"
+          href={youtube}
+          target="_blank"
+          rel="noopener noreferrer nofollow"
+        >
+          <IoLogoYoutube />
+        </a>
+      </li>
+    )
+  }
+  {
+    xtwitter && (
+      <li class="inline-block">
+        <a
+          aria-label="xtwitter"
+          href={xtwitter}
+          target="_blank"
+          rel="noopener noreferrer nofollow"
+        >
+          <FaXTwitter />
+        </a>
+      </li>
+    )
+  }
   {
     facebook && (
       <li class="inline-block">
@@ -80,7 +130,7 @@ const {
           target="_blank"
           rel="noopener noreferrer nofollow"
         >
-          <IoLogoFacebook />
+          <FaFacebook />
         </a>
       </li>
     )
@@ -109,34 +159,6 @@ const {
           rel="noopener noreferrer nofollow"
         >
           <IoLogoMastodon />
-        </a>
-      </li>
-    )
-  }
-  {
-    instagram && (
-      <li class="inline-block">
-        <a
-          aria-label="instagram"
-          href={instagram}
-          target="_blank"
-          rel="noopener noreferrer nofollow"
-        >
-          <IoLogoInstagram />
-        </a>
-      </li>
-    )
-  }
-  {
-    youtube && (
-      <li class="inline-block">
-        <a
-          aria-label="youtube"
-          href={youtube}
-          target="_blank"
-          rel="noopener noreferrer nofollow"
-        >
-          <IoLogoYoutube />
         </a>
       </li>
     )

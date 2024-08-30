@@ -185,6 +185,11 @@
   }
 }
 
+
+  .lg\:sticky {
+    @apply lg:sticky;
+  }
+
 // footer
 footer p a {
   @apply transition-all duration-200 hover:text-white;

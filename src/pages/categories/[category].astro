@@ -1,6 +1,7 @@
 ---
 import Base from "@/layouts/Base.astro";
 import Posts from "@/layouts/Posts.astro";
+import Featured from "@/layouts/components/Featured.astro";
 import { getSinglePage } from "@/lib/contentParser.astro";
 import { getTaxonomy } from "@/lib/taxonomyParser.astro";
 import { sortByDate } from "@/lib/utils/sortFunctions";
@@ -27,11 +28,19 @@ const title = humanize(category || "");
 ---
 
 <Base title={title || "Category"}>
-  <div class="section">
-    <div class="container">
-      <p class="text-center text-2xl mb-4">Showing Posts From</p>
-      <h1 class="h2 mb-16 text-center text-primary">{title}</h1>
-      <Posts posts={sortedPosts} fluid={false} />
+  <section class="bg-gray-50 pt-12 sm:pt-16 lg:pt-20">
+    <div
+      class="mx-auto max-w-2xl px-4 sm:px-6 lg:flex lg:max-w-screen-2xl lg:items-start lg:px-8"
+    >
+      <!-- Category Hero-->
+      <div class="relative lg:sticky lg:top-28 lg:w-1/2">
+        <Featured posts={sortedPosts} className="mb-16" />
+      </div>
+      <!-- Category Articles-->
+      <div class="my-12 sm:mt-16 lg:ml-12 lg:mt-0 lg:w-1/2 xl:ml-16">
+      <!-- <p class="text-center text-2xl mb-4">Showing Posts From</p> -->
+      <h1 class="h3 text-left text-primary">{title}</h1>
+      <Posts posts={sortedPosts} />
     </div>
   </div>
 </Base>

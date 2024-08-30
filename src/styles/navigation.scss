@@ -18,6 +18,9 @@ input#nav-toggle:checked ~ #nav-menu {
 .navbar {
   @apply relative flex w-full h-20 items-center justify-between bg-white bg-opacity-85 border-white border-b px-4 backdrop-blur-md sm:px-6 lg:px-8 md:shadow-md;
 }
+.navbar-brand {
+  @apply text-2xl font-primary;
+}
 
 .navbar-brand img {
   @apply h-auto sm:h-auto sm:max-w-full #{!important};
