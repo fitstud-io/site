@@ -27,8 +27,10 @@ const authorsCollection = defineCollection({
     social: z
       .object({
         facebook: z.string().optional(),
-        twitter: z.string().optional(),
+        xtwitter: z.string().optional(),
+        youtube: z.string().optional(),
         instagram: z.string().optional(),
+        github: z.string().optional(),
       })
       .optional(),
     draft: z.boolean().optional(),
