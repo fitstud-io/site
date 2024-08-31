@@ -168,11 +168,13 @@ const { title, meta_title, description, image, noindex, canonical } =
       }`}
     />
     <meta name="twitter:card" content="summary_large_image" />
+
     <!-- AlpineJS -->
     <script
       defer
       src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
     ></script>
+
     <!-- Lazyload CDN -->
     <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.7.0/dist/lazyload.min.js"></script>
 
@@ -184,5 +186,14 @@ const { title, meta_title, description, image, noindex, canonical } =
       <slot />
     </main>
     <Footer />
+
+    <!-- Lazyload Script -->
+    <script>
+      var lazyLoadInstance = new LazyLoad({
+        callback_loaded: function (img) {
+          img.closest('.animate-pulse').classList.remove('animate-pulse')
+        },
+      })
+    </script>
   </body>
 </html>

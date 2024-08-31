@@ -11,8 +11,7 @@ const postsSlug = getPosts.map((item) => item.slug);
 export async function getStaticPaths() {
   const posts = await getSinglePage("posts");
   const pages = await getSinglePage("pages");
-  const podcasts = await getSinglePage("podcasts");
-  const allPages = [...pages, ...posts, ...podcasts];
+  const allPages = [...pages, ...posts];
 
   const paths = allPages.map((page: any) => ({
     params: {

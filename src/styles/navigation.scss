@@ -50,6 +50,16 @@ input#nav-toggle:checked ~ #nav-menu {
   @apply block min-w-[150px] py-1 text-[17px] font-semibold text-dark transition hover:text-primary;
 }
 
+
+.lg\:order-1 {
+  order: 1;
+}
+
+.lg\:order-2 {
+  order: 2;
+}
+
+
 // search style
 .search-modal {
   @apply invisible absolute top-0 left-0 right-0 z-10 h-10 bg-white opacity-0 transition md:h-full;
