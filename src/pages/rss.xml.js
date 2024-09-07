@@ -1,26 +1,27 @@
-import config from "@/config/config.json";
-// import rss, { pagesGlobToRssItems } from '@astrojs/rss';
-import rss from '@astrojs/rss';
-import { getCollection } from 'astro:content';
-
-const title  = config.site.title;
-const base_url = config.site.base_url;
-const  meta_description  = config.metadata.meta_description;
+import rss from "@astrojs/rss";
+import { getCollection } from "astro:content";
+import { SITE_TITLE, SITE_DESCRIPTION } from "@consts";
 
 export async function GET(context) {
-  const blog = await getCollection('postsCollection');
+  let posts = await getCollection("posts");
+
+  posts = posts
+    .sort((a, b) => new Date(b.data.pubDate) - new Date(a.data.pubDate))
+    .slice(0, 3);
+
   return rss({
-    title: (title),
-    description:  (meta_description),
-    stylesheet: false,
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
     site: context.site,
-    items: blog.map((post) => ({
+    customData: `<language>zh-CN</language>`,
+    trailingSlash: true,
+    items: posts.map((post) => ({
       title: post.data.title,
-      pubDate: post.data.date,
       description: post.data.description,
-      link: `/${post.slug}/`,
+      link: `/posts/${post.slug}`,
+      pubDate: post.data.pubDate,
+      content: post.body,
+      customData: post.data.customData,
     })),
-    customData: '<language>en-us</language>',
-    canonicalUrl: (base_url),
   });
 }

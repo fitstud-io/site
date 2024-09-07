@@ -1,57 +1,56 @@
+import { defineConfig } from "astro/config";
+import { remarkModifiedTime } from "./src/utils/remark-modified-time.mjs";
 import mdx from "@astrojs/mdx";
-import react from "@astrojs/react";
 import sitemap from "@astrojs/sitemap";
+import partytown from "@astrojs/partytown";
+import pagefind from "astro-pagefind";
+import icon from "astro-icon";
 import tailwind from "@astrojs/tailwind";
-import AutoImport from "astro-auto-import";
-import { defineConfig, squooshImageService } from "astro/config";
-import remarkCollapse from "remark-collapse";
-import remarkToc from "remark-toc";
-import config from "./src/config/config.json";
 
 // https://astro.build/config
 export default defineConfig({
-  site: config.site.base_url ? config.site.base_url : "http://examplesite.com",
-  base: config.site.base_path ? config.site.base_path : "/",
-  trailingSlash: config.site.trailing_slash ? "always" : "never",
-  sitemap: true,
-  image: {
-    service: squooshImageService(),
+  site: "https://fitstud.io/",
+  trailingSlash: "ignore",
+  prefetch: {
+    prefetchAll: true,
+    defaultStrategy: 'viewport',
   },
+
+  experimental: {
+    contentCollectionCache: true,
+  },
+
+  image: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "**.unsplash.com",
+      },
+    ],
+  },
+
+  markdown: {
+    remarkPlugins: [remarkModifiedTime],
+  },
+
   integrations: [
-    react(),
+    mdx(),
     sitemap(),
-    tailwind({
+    pagefind(),
+    tailwind(),
+
+    partytown({
       config: {
-        applyBaseStyles: false,
+        forward: ["dataLayer.push"],
+        debug: false,
       },
     }),
-    AutoImport({
-      imports: [
-        "@/shortcodes/Button",
-        "@/shortcodes/Accordion",
-        "@/shortcodes/Notice",
-        "@/shortcodes/Video",
-        "@/shortcodes/Youtube",
-        "@/shortcodes/Tabs",
-        "@/shortcodes/Tab",
-      ],
+
+    icon({
+      include: {
+        tabler: ["*"],
+      },
     }),
-    mdx(),
+
   ],
-  markdown: {
-    remarkPlugins: [
-      remarkToc,
-      [
-        remarkCollapse,
-        {
-          test: "Table of contents",
-        },
-      ],
-    ],
-    shikiConfig: {
-      theme: "one-dark-pro",
-      wrap: true,
-    },
-    extendDefaultPlugins: true,
-  },
 });

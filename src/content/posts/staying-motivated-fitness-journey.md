@@ -1,13 +1,18 @@
 ---
-id: staying-motivated-fitness-journey
+slug: staying-motivated-fitness-journey
 title: "Dealing with Setbacks: Bouncing Back and Staying Motivated in Your Fitness Journey"
-description: "How to effectively manage setbacks, maintain motivation, and find resilience in your fitness journey,"
-date: 2023-06-26T00:00:00Z
-image: "/images/mindset/staying-motivated-fitness-journey.webp"
-authors: ["Damien Wright"]
-categories: ["mindset"]
-tags: ["motivation", "plateaus"]
-draft: false
+description: "How to effectively manage setbacks, maintain motivation, and find resilience in your fitness journey."
+category:
+  - mindset
+tags:
+  - motivation
+  - journey
+  - positivity
+pubDate: 2023-06-26
+cover: "https://fitstud.io/images/mindset/staying-motivated-fitness-journey.webp"
+coverAlt: Staying Motivated in Your Fitness Journey
+author: Damien Wright
+# draft: false
 ---
 
 In the world of fitness, setbacks are a common occurrence. These hurdles can manifest as plateaus in your progress, injuries, life events, or simply a loss of motivation. However, the true test of your success in your fitness journey lies in your ability to overcome these obstacles and keep your motivation alive. Let's explore strategies for dealing with setbacks and staying motivated as you pursue your health and wellness goals.

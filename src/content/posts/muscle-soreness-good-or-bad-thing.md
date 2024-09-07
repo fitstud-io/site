@@ -1,13 +1,18 @@
 ---
-id: muscle-soreness-good-or-bad-thing
+slug: muscle-soreness-good-or-bad-thing
 title: "Is Muscle Soreness a Good or Bad Thing?"
 description: "Unravel the mysteries of muscle soreness, exploring its causes, effects, and its role in our fitness journey."
-date: 2023-08-28T00:00:00Z
-image: "/images/fitness/muscle-soreness-good-or-bad-thing.webp"
-authors: ["Damien Wright"]
-categories: ["fitness"]
-tags: ["muscle", "soreness"]
-draft: false
+category:
+  - fitness
+tags:
+  - muscle
+  - soreness
+  - journey
+pubDate: 2023-08-28
+cover: "https://fitstud.io/images/fitness/muscle-soreness-good-or-bad-thing.webp"
+coverAlt: Is Muscle Soreness a Good or Bad Thing
+author: Damien Wright
+# draft: false
 ---
 
 The question of whether muscle soreness is good or bad doesn't have a simple answer. Much like many aspects of fitness, it depends on the context.

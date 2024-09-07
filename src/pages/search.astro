@@ -1,23 +1,20 @@
 ---
-import Base from "@/layouts/Base.astro";
-import SearchBar from "@/layouts/SearchBar";
-import { getSinglePage } from "@/lib/contentParser.astro";
-
-// Retrieve all articles
-const posts = await getSinglePage("posts");
-
-// List of items to search in
-const searchList = posts.map((item: any) => ({
-  slug: item.slug,
-  data: item.data,
-  content: item.body,
-}));
+import BaseLayout from "@layouts/BaseLayout.astro";
+import { SEARCH_PAGE_TITLE, SEARCH_PAGE_DESCRIPTION, SITE_TITLE } from "@consts";
+import Pagefind from "astro-pagefind/components/Search";
 ---
 
-<Base title={`Search`}>
-  <section class="section">
-    <div class="container">
-      <SearchBar client:load searchList={searchList} />
+<BaseLayout title={SEARCH_PAGE_TITLE} description={SEARCH_PAGE_DESCRIPTION}>
+  <section class="mx-auto w-full max-w-screen-2xl px-4 md:px-6">
+    <div class="min-h-[500px] flex flex-col items-center justify-start pt-32">
+      <div class="w-full max-w-[500px] h-[34px] md:w-[400px] lg:w-[500px]">
+        <Pagefind
+          id="search"
+          className="pagefind-ui w-full h-full"
+          uiOptions={{ showImages: false }}
+        />
+      </div>
     </div>
   </section>
-</Base>
+</BaseLayout>
+

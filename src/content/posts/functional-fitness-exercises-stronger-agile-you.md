@@ -1,13 +1,18 @@
 ---
-id: functional-fitness-exercises-stronger-agile-you
+slug: functional-fitness-exercises-stronger-agile-you
 title: "Functional Fitness: Exercises for a Stronger, More Agile You"
-description: "functional fitness has emerged as a cornerstone for those seeking not just physical strength, but also improved agility, flexibility, and overall well-being"
-date: 2023-09-26T00:00:00Z
-image: /images/fitness/functional-fitness-exercises-stronger-agile-you.webp
-authors: ["Damien Wright"]
-categories: ["fitness"]
-tags: ["agility", "strength", "flexibility"]
-draft: false
+description: "Functional fitness has emerged as a cornerstone for those seeking not just physical strength, but also improved agility, flexibility, and overall well-being."
+category:
+  - fitness
+tags:
+  - agility
+  - strength
+  - flexibility
+pubDate: 2023-09-26
+cover: "https://fitstud.io/images/fitness/functional-fitness-exercises-stronger-agile-you.webp"
+coverAlt: "Functional Fitness: Exercises for a Stronger, More Agile You"
+author: Damien Wright
+# draft: false
 ---
 
 In the ever-evolving landscape of fitness, functional fitness has emerged as a cornerstone for those seeking not just physical strength, but also improved agility, flexibility, and overall well-being. Unlike traditional workouts that focus solely on aesthetics or brute force, functional fitness exercises are designed to mimic real-life movements, making them invaluable for enhancing your everyday life. Whether you're an athlete looking to up your game or someone who simply wants to move more comfortably, functional fitness is for you.

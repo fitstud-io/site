@@ -1,22 +1,21 @@
 ---
-import Base from "@/layouts/Base.astro";
-import { markdownify } from "@/lib/utils/textConverter";
-import { getEntryBySlug } from "astro:content";
-const entry = await getEntryBySlug("pages", "404");
-const { Content } = await entry.render();
+import BaseLayout from "@layouts/BaseLayout.astro";
+import { Icon } from "astro-icon/components";
+
+const title = `Error 404`;
+const description = `Error 404`;
 ---
 
-<Base title={entry.data.title}>
-  <section class="section page-404">
-    <div class="container">
-      <div class="flex h-[40vh] items-center justify-center">
-        <div class="text-center">
-          <h1 class="mb-4" set:html={markdownify(entry.data.title)} />
-          <Content />
-        </div>
-      </div>
+<BaseLayout title={title} description={description}>
+  <div class="text-center w-full py-10 px-4 sm:px-6 lg:px-8">
+    <h1 class="block text-7xl font-bold text-gray-800 sm:text-9xl dark:text-white">404</h1>
+    <p class="mt-3 text-gray-600 dark:text-neutral-400">Oops, something went wrong.</p>
+    <p class="text-gray-600 dark:text-neutral-400">Sorry, we couldn't find your page.</p>
+    <div class="mt-5 flex flex-col justify-center items-center gap-2 sm:flex-row sm:gap-3">
+      <a class="w-full sm:w-auto py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-neutral-400 text-white hover:bg-neutral-600 disabled:opacity-50 disabled:pointer-events-none" href="/">
+        <Icon name="tabler:chevron-left" class="icon-base" />
+        Back to homepage
+      </a>
     </div>
-  </section>
-</Base>
-
-
+</div>
+</BaseLayout>

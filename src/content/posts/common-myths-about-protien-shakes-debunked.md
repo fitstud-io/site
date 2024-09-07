@@ -1,16 +1,21 @@
 ---
-id: common-myths-about-protien-shakes-debunked
-title: Common Myths About Protien & Shakes Debunked
-description: By dispelling these myths, we can make more informed choices about our high protein intake, optimizing our muscle growth and recovery
-date: 2022-08-09T00:00:00.000Z
-image: /images/nutrition/myths-about-protien-shakes-debunked.webp
-authors: ["Damien Wright"]
-categories: ["nutrition"]
-tags: ["protien", "whey"]
-draft: false
+slug: common-myths-about-protien-shakes-debunked
+title: "Common Myths About Protien & Shakes Debunked"
+description: "By dispelling these myths, we can make more informed choices about our high protein intake, optimizing our muscle growth and recovery."
+category:
+  - nutrition
+tags:
+  - protein
+  - growth
+  - shakes
+pubDate: 2023-08-09
+cover: "https://fitstud.io/images/nutrition/myths-about-protien-shakes-debunked.webp"
+coverAlt: Common Myths About Protien & Shakes Debunked
+author: Damien Wright
+# draft: false
 ---
 
-### Myth 1  Protein Shakes Aren't Just for Workout Days
+### Myth 1: Protein Shakes Aren't Just for Workout Days
 
 There's a widespread misconception that protein supplements are only needed on days when you hit the gym. In reality, your muscles are in a constant state of repair and growth, even on rest days. Protein supplements can offer a convenient and swift source of high-quality protein that aids in this ongoing recovery process.
 

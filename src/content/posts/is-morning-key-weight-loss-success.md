@@ -1,13 +1,18 @@
 ---
-id: is-morning-key-weight-loss-success
+slug: is-morning-key-weight-loss-success
 title: "Timing Your Workouts: Is Morning the Key to Weight Loss Success?"
 description: "Is the timing of your workout significant? Recent research published suggests that for those with weight loss goals, morning workouts might be the key."
-date: 2023-08-28T00:00:00Z
-image: "/images/fitness/is-morning-key-weight-loss-success.webp"
-authors: ["Damien Wright"]
-categories: ["fitness"]
-tags: ["weight-loss", "success"]
-draft: false
+category:
+  - fitness
+tags:
+  - goals
+  - success
+  - weight-loss
+pubDate: 2023-08-28
+cover: "https://fitstud.io/images/fitness/is-morning-key-weight-loss-success.webp"
+coverAlt: "Timing Your Workouts: Is Morning the Key to Weight Loss Success?"
+author: Damien Wright
+# draft: false
 ---
 
 The age-old question of whether there's an optimal time to exercise has kept fitness enthusiasts in contemplation. Health and fitness experts have traditionally advocated that the best time to work out is whenever it fits into your schedule. This advice holds true, although late-night gym-goers should take heed of certain guidelines.

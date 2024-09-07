@@ -2,47 +2,26 @@ import { defineCollection, z } from "astro:content";
 
 // Post collection schema
 const postsCollection = defineCollection({
+  type: "content",
   schema: z.object({
-    id: z.string().optional(),
     title: z.string(),
-    meta_title: z.string().optional(),
-    description: z.string().optional(),
-    date: z.date().optional(),
-    image: z.string().optional(),
-    authors: z.array(z.string()).default(["admin"]),
-    categories: z.array(z.string()).default(["others"]),
-    tags: z.array(z.string()).default(["others"]),
-    draft: z.boolean().optional(),
-  }),
-});
-
-// Author collection schema
-const authorsCollection = defineCollection({
-  schema: z.object({
-    id: z.string().optional(),
-    title: z.string(),
-    meta_title: z.string().optional(),
-    image: z.string().optional(),
-    description: z.string().optional(),
-    social: z
-      .object({
-        facebook: z.string().optional(),
-        xtwitter: z.string().optional(),
-        youtube: z.string().optional(),
-        instagram: z.string().optional(),
-        github: z.string().optional(),
-      })
-      .optional(),
+    description: z.string(),
+    pubDate: z.date(),
+    lastModified: z.string().optional(),
+    cover: z.string(),
+    coverAlt: z.string().optional(),
+    category: z.array(z.string()),
+    tags: z.array(z.string()),
+    author: z.string(),
     draft: z.boolean().optional(),
   }),
 });
 
 // Pages collection schema
 const pagesCollection = defineCollection({
+  type: "content",
   schema: z.object({
-    id: z.string().optional(),
     title: z.string(),
-    meta_title: z.string().optional(),
     description: z.string().optional(),
     image: z.string().optional(),
     layout: z.string().optional(),
@@ -54,5 +33,6 @@ const pagesCollection = defineCollection({
 export const collections = {
   posts: postsCollection,
   pages: pagesCollection,
-  authors: authorsCollection,
 };
+
+// export const collections = { posts };

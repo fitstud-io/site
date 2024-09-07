@@ -1,13 +1,18 @@
 ---
-id: stress-reduction-improved-fitness-performance
+slug: stress-reduction-improved-fitness-performance
 title: "The Connection Between Stress Reduction and Improved Fitness Performance"
-description: "the relationship between stress reduction and improved fitness performance is a two-way street that holds significant implications"
-date: 2022-08-22T00:00:00.000Z
-image: "/images/mindset/stress-reduction-improved-fitness-performance.webp"
-authors: ["Damien Wright"]
-categories: ["mindset"]
-tags: ["stress", "performance"]
-draft: false
+description: "The relationship between stress reduction and improved fitness performance is a two-way street that holds significant implications."
+category:
+  - mindset
+tags:
+  - stress
+  - performance
+  - improvement
+pubDate: 2023-08-01
+cover: "https://fitstud.io/images/mindset/stress-reduction-improved-fitness-performance.webp"
+coverAlt: Stress Reduction Improved Fitness Performance
+author: Damien Wright
+# draft: false
 ---
 
 In today's fast-paced world, stress has become an unwelcome companion for many. Whether it's due to work pressures, personal challenges, or the general demands of modern life, stress can take a toll on our physical and mental well-being. While it's widely known that regular exercise can help alleviate stress, the relationship between stress reduction and improved fitness performance is a two-way street that holds significant implications for those seeking to optimize their workouts.

@@ -1,13 +1,18 @@
 ---
-id: pitfalls-watch-outin-your-fitness-diet
+slug: pitfalls-watch-outin-your-fitness-diet
 title: "Avoiding Common Nutrition Mistakes: Pitfalls to Watch Out for in Your Fitness Diet"
-description: we'll explore these pitfalls and provide guidance on how to avoid them, ensuring your diet supports your fitness goals
-date: 2023-08-26T00:00:00Z
-image: /images/nutrition/pitfalls-watch-outin-your-fitness-diet.webp
-authors: ["Damien Wright"]
-categories: ["nutrition"]
-tags: ["diet", "protien", "supplements"]
-draft: false
+description: "We'll explore these pitfalls and provide guidance on how to avoid them, ensuring your diet supports your fitness goals."
+category:
+  - nutrition
+tags:
+  - diet
+  - journey
+  - positivity
+pubDate: 2023-04-01
+cover: "https://fitstud.io/images/nutrition/pitfalls-watch-outin-your-fitness-diet.webp"
+coverAlt: Pitfalls to Watch Out for in Your Fitness Diet
+author: Damien Wright
+# draft: false
 ---
 
 Embarking on a fitness journey is an exciting and rewarding endeavor. You commit to regular exercise, set goals, and strive for a healthier, more active lifestyle. However, achieving your fitness objectives isn't just about hitting the gym or going for a run; it's also about nourishing your body with the right nutrients. Unfortunately, many individuals fall into common nutrition traps that can hinder their progress. In this article, we'll explore these pitfalls and provide guidance on how to avoid them, ensuring your diet supports your fitness goals.

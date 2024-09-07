@@ -1,13 +1,18 @@
 ---
-id: preparing-weekly-menus-reach-fitness-goals
+slug: preparing-weekly-menus-reach-fitness-goals
 title: "Meal Planning for Athletes: Preparing Weekly Menus to Reach Your Fitness Goals"
 description: "To fuel your body optimally, meal planning becomes an essential tool in your toolkit."
-date: 2022-08-20T00:00:00.000Z
-image: /images/nutrition/preparing-weekly-menus-reach-fitness-goals.webp
-authors: ["Damien Wright"]
-categories: ["nutrition"]
-tags: ["meal", "diet", "goals"]
-draft: false
+category:
+  - nutrition
+tags:
+  - meal
+  - planning
+  - goals
+pubDate: 2023-08-20
+cover: "https://fitstud.io/images/nutrition/preparing-weekly-menus-reach-fitness-goals.webp"
+coverAlt: Meal Planning for Athletes
+author: Damien Wright
+# draft: false
 ---
 
 For athletes and fitness enthusiasts, the adage "you are what you eat" takes on a whole new level of importance. Proper nutrition is the cornerstone of athletic performance and overall health. To fuel your body optimally, meal planning becomes an essential tool in your toolkit. This article delves into the world of meal planning for athletes, offering valuable insights and practical tips to help you prepare weekly menus that align with your fitness goals.

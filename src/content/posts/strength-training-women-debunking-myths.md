@@ -1,13 +1,18 @@
 ---
-id: strength-training-women-debunking-myths
+slug: strength-training-women-debunking-myths
 title: "Strength Training for Women: Debunking Myths and Building Confidence"
-description: "Women approach strength training with hesitation due to persistent myths and misconceptions... we'll debunk these myths and shed light on the countless benefits of strength training"
-date: 2023-08-28T00:00:00Z
-image: "/images/fitness/strength-training-women-debunking-myths.webp"
-authors: ["Damien Wright"]
-categories: ["fitness"]
-tags: ["women", "strength"]
-draft: false
+description: "Women approach strength training with hesitation due to persistent myths and misconceptions... we'll debunk these myths and shed light on the countless benefits of strength training."
+category:
+  - fitness
+tags:
+  - strength
+  - training
+  - debunking
+pubDate: 2023-04-28
+cover: "https://fitstud.io/images/fitness/strength-training-women-debunking-myths.webp"
+coverAlt: "Strength Training for Women"
+author: Damien Wright
+# draft: false
 ---
 
 Strength training is a powerful tool that has been transforming women's fitness journeys across the globe. Yet, it's not uncommon for women to approach it with hesitation, largely due to persistent myths and misconceptions. In this article, we'll debunk these myths and shed light on the countless benefits of strength training. We'll also explore how embracing this form of exercise can empower women, boost their confidence, and help them achieve their fitness goals.

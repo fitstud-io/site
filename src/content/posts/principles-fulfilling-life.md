@@ -1,13 +1,18 @@
 ---
-id: principles-fulfilling-life
+slug: principles-fulfilling-life
 title: "Embracing Everyday Happiness: Principles for a Fulfilling Life"
 description: "Perfection isn't the key to mastering the art of happiness. We often associate happiness with hard work, achieving goals, or obtaining our desires."
-date: 2022-08-27T00:00:00.000Z
-image: "/images/mindset/simple-principles-fulfilling-life.webp"
-authors: ["Damien Wright"]
-categories: ["mindset"]
-tags: ["life", "happiness"]
-draft: false
+category:
+  - mindset
+tags:
+  - life
+  - happiness
+  - goals
+pubDate: 2023-04-01
+cover: "https://fitstud.io/images/mindset/simple-principles-fulfilling-life.webp"
+coverAlt: Embracing Everyday Happiness
+author: Damien Wright
+# draft: false
 ---
 
 Perfection isn't the key to mastering the art of happiness. We often associate happiness with hard work, achieving goals, or obtaining our desires. Those stylish clothes, a grand house, and a fancy car may bring temporary joy, but true happiness resides in the little joys of life, in the simplicity of everyday experiences. Happiness is within our reach right now, and it's through learning from our daily lives that we discover what truly matters.
