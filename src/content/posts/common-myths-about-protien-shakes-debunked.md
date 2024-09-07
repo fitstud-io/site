@@ -9,7 +9,7 @@ tags:
   - growth
   - shakes
 pubDate: 2023-08-09
-cover: "https://fitstud.io/images/nutrition/myths-about-protien-shakes-debunked.webp"
+cover: "https://fitstud.io/images/posts/myths-about-protien-shakes-debunked.webp"
 coverAlt: Common Myths About Protien & Shakes Debunked
 author: Damien Wright
 # draft: false

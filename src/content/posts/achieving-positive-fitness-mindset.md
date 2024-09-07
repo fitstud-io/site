@@ -9,7 +9,7 @@ tags:
   - success
   - positivity
 pubDate: 2023-04-01
-cover: "https://fitstud.io/images/mindset/achieving-positive-fitness-mindset.webp"
+cover: "https://fitstud.io/images/posts/achieving-positive-fitness-mindset.webp"
 coverAlt: Achieving a Positive Fitness Mindset
 author: Damien Wright
 # draft: false

@@ -8,7 +8,7 @@ tags:
   - health
   - depression
 pubDate: 2024-08-25
-cover: "https://fitstud.io/images/mindset/mental-health-benefits-of-exercise.webp"
+cover: "https://fitstud.io/images/posts/podcast-coming-soon.jpg"
 coverAlt: "Mental Health Benefits of Exercise"
 author: Damien Wright
 # draft: false

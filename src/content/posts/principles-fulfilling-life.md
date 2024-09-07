@@ -9,7 +9,7 @@ tags:
   - happiness
   - goals
 pubDate: 2023-04-01
-cover: "https://fitstud.io/images/mindset/simple-principles-fulfilling-life.webp"
+cover: "https://fitstud.io/images/posts/simple-principles-fulfilling-life.webp"
 coverAlt: Embracing Everyday Happiness
 author: Damien Wright
 # draft: false

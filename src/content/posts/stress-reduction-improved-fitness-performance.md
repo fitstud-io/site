@@ -9,7 +9,7 @@ tags:
   - performance
   - improvement
 pubDate: 2023-08-01
-cover: "https://fitstud.io/images/mindset/stress-reduction-improved-fitness-performance.webp"
+cover: "https://fitstud.io/images/posts/stress-reduction-improved-fitness-performance.webp"
 coverAlt: Stress Reduction Improved Fitness Performance
 author: Damien Wright
 # draft: false
