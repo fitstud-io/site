@@ -9,7 +9,7 @@ tags:
   - training
   - debunking
 pubDate: 2023-04-28
-cover: "https://fitstud.io/images/posts/strength-training-women-debunking-myths.webp"
+cover: "strength-training-women-debunking-myths.webp"
 coverAlt: "Strength Training for Women"
 author: Damien Wright
 # draft: false

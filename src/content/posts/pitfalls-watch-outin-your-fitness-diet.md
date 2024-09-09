@@ -9,7 +9,7 @@ tags:
   - journey
   - positivity
 pubDate: 2023-04-01
-cover: "https://fitstud.io/images/posts/pitfalls-watch-outin-your-fitness-diet.webp"
+cover: "pitfalls-watch-outin-your-fitness-diet.webp"
 coverAlt: Pitfalls to Watch Out for in Your Fitness Diet
 author: Damien Wright
 # draft: false

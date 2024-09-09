@@ -9,7 +9,7 @@ tags:
   - soreness
   - journey
 pubDate: 2023-08-28
-cover: "https://fitstud.io/images/posts/muscle-soreness-good-or-bad-thing.webp"
+cover: "muscle-soreness-good-or-bad-thing.webp"
 coverAlt: Is Muscle Soreness a Good or Bad Thing
 author: Damien Wright
 # draft: false

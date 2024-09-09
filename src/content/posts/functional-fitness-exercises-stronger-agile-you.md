@@ -9,7 +9,7 @@ tags:
   - strength
   - flexibility
 pubDate: 2023-09-26
-cover: "https://fitstud.io/images/posts/functional-fitness-exercises-stronger-agile-you.webp"
+cover: "functional-fitness-exercises-stronger-agile-you.webp"
 coverAlt: "Functional Fitness: Exercises for a Stronger, More Agile You"
 author: Damien Wright
 # draft: false

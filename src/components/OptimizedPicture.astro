@@ -1,15 +1,15 @@
 ---
 import { Picture } from "astro:assets";
 
-interface Props {
-  src: string;
-  alt: string;
-  widths?: number[];
-  sizes?: string;
-  formats?: string[];
-  fallbackFormat?: string;
-  class?: string;
-}
+// interface Props {
+//   src: string;
+//   alt: string;
+//   widths?: number[];
+//   sizes?: string;
+//   formats?: string[];
+//   fallbackFormat?: string;
+//   class?: string;
+// }
 
 const {
   src,
@@ -26,7 +26,7 @@ const {
 ---
 
 <Picture
-  src={src}
+  src={import('../assets/images/' + src)}
   alt={alt}
   widths={widths}
   sizes={sizes}

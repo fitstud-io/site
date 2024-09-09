@@ -9,7 +9,7 @@ tags:
   - success
   - weight-loss
 pubDate: 2023-08-28
-cover: "https://fitstud.io/images/posts/is-morning-key-weight-loss-success.webp"
+cover: "is-morning-key-weight-loss-success.webp"
 coverAlt: "Timing Your Workouts: Is Morning the Key to Weight Loss Success?"
 author: Damien Wright
 # draft: false

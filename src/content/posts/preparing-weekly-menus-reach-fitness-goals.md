@@ -9,7 +9,7 @@ tags:
   - planning
   - goals
 pubDate: 2023-08-20
-cover: "https://fitstud.io/images/posts/preparing-weekly-menus-reach-fitness-goals.webp"
+cover: "preparing-weekly-menus-reach-fitness-goals.webp"
 coverAlt: Meal Planning for Athletes
 author: Damien Wright
 # draft: false
