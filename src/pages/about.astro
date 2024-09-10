@@ -1,6 +1,6 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
-import OptimizedCover from "@components/OptimizedPicture.astro";
+import { Image } from "astro:assets";
 // import { Icon } from "astro-icon/components";
 import LatestPosts from "@components/LatestPosts.astro";
 
@@ -14,7 +14,8 @@ const description = '';
     <div class="row gy-5 gx-4 pb-10">
       <header class="col-12">
         <a href={`/about/`} class="rounded-lg block overflow-hidden group">
-        <OptimizedCover src={'https://fitstud.io/images/contact.webp'} alt={title} class="group-hover:scale-[1.03] transition duration-300 w-full" />
+          <!-- <Image src={import('/images/about.webp')} alt={title} class="group-hover:scale-[1.03] transition duration-300 w-full" /> -->
+          <img src="/images/about.webp"alt={title} class="group-hover:scale-[1.03] transition duration-300 w-full" />
         </a>
         <h1 class="h1 mb-8 mt-3">
           <a href={`/about/`} class="block hover:text-primary transition duration-300">
