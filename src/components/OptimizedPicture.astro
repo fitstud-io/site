@@ -1,37 +1,47 @@
 ---
-import { Picture } from "astro:assets";
+import type { ImageMetadata } from 'astro';
+import { Image } from "astro:assets";
+
+interface Props {
+  src: string;
+  alt: string;
+  widths?: number[];
+  sizes?: string;
+  formats?: string[];
+  fallbackFormat?: string;
+  class?: string;
+}
 
 // interface Props {
-//   src: string;
-//   alt: string;
-//   widths?: number[];
-//   sizes?: string;
-//   formats?: string[];
-//   fallbackFormat?: string;
-//   class?: string;
+//   imagePath: string;
+//   altText: string;
+//   name: string;
+//   age: number;
 // }
 
 const {
   src,
   alt,
   widths = [392, 700, 980, 1960],
-  sizes = `(max-width: 360px) 392px,
-           (max-width: 720px) 700px,
-           (max-width: 1600px) 980px,
-           1960px`,
+  sizes =  `(max-width: 360px) 392px,
+            (max-width: 720px) 700px,
+            (max-width: 1600px) 980px,
+            1960px`,
   formats = ["avif"],
   fallbackFormat = "avif",
   class: className = "mx-auto w-full max-w-full rounded-lg"
 } = Astro.props;
----
 
-<Picture
-  src={import('../assets/images/' + src)}
+// const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/images/*.{jpeg,jpg,png,webp,gif,avifwebp,gif,avif}')
+---
+<!-- <Image src={import("../assets/images/" + post.data.cover)} alt={post.data.title} class="group-hover:scale-[1.03] transition duration-300 w-full" /> -->
+
+<Image
+  src={import("../assets/images/" + src)}
   alt={alt}
   widths={widths}
   sizes={sizes}
   formats={formats}
   fallbackFormat={fallbackFormat}
   class={className}
-  inferSize
 />
