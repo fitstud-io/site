@@ -38,7 +38,7 @@ const truncatedDescription = truncateUTF8String(post.data.description, 150);
         class="rounded-lg block hover:text-primary overflow-hidden group"
       >
       <!-- <OptimizedCover src={post.data.cover} alt={post.data.title} class="group-hover:scale-[1.03] transition duration-300 w-full" /> -->
-      <Image src={import("../assets/images/" + post.data.cover)} alt={post.data.title} class="group-hover:scale-[1.03] transition duration-300 w-full" />
+      <Image src={import("/src/assets/images/" + post.data.cover)} alt={post.data.title} class="group-hover:scale-[1.03] transition duration-300 w-full" />
       </a>
       <div class="mt-8 flex items-center gap-4 text-xs">
         <span>{post.data.tags.join(" ")}</span>
