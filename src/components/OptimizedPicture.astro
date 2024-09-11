@@ -27,17 +27,18 @@ const {
             (max-width: 720px) 700px,
             (max-width: 1600px) 980px,
             1960px`,
-  formats = ["avif"],
+  formats = ["avif", 'webp'],
   fallbackFormat = "avif",
   class: className = "group-hover:scale-[1.03] transition duration-300 w-full"
 } = Astro.props;
 
+// import image1 from '/src/assets/images/image1.png'
 // const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/images/*.{jpeg,jpg,png,webp,gif,avifwebp,gif,avif}')
 ---
 <!-- <Image src={import("../assets/images/" + post.data.cover)} alt={post.data.title} class="group-hover:scale-[1.03] transition duration-300 w-full" /> -->
 
 <Picture
-  src={import("../assets/images/" + src)}
+  src={import("/src/assets/images/" + src)}
   alt={alt}
   widths={widths}
   sizes={sizes}
