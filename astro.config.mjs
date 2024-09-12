@@ -20,15 +20,6 @@ export default defineConfig({
     contentCollectionCache: true,
   },
 
-  image: {
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "**.unsplash.com",
-      },
-    ],
-  },
-
   markdown: {
     remarkPlugins: [remarkModifiedTime],
   },
