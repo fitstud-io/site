@@ -9,7 +9,7 @@ tags:
   - happiness
   - goals
 pubDate: 2023-04-01
-cover: "simple-principles-fulfilling-life.webp"
+cover: "../assets/images/simple-principles-fulfilling-life.webp"
 coverAlt: Embracing Everyday Happiness
 author: Damien Wright
 # draft: false

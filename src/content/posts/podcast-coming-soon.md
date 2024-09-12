@@ -8,7 +8,7 @@ tags:
   - health
   - depression
 pubDate: 2024-08-25
-cover: "podcast-coming-soon.jpg"
+cover: "../assets/images/podcast-coming-soon.jpg"
 coverAlt: "Mental Health Benefits of Exercise"
 author: Damien Wright
 # draft: false

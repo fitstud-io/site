@@ -9,7 +9,7 @@ tags:
   - journey
   - positivity
 pubDate: 2023-06-26
-cover: "staying-motivated-fitness-journey.webp"
+cover: "../assets/images/staying-motivated-fitness-journey.webp"
 coverAlt: Staying Motivated in Your Fitness Journey
 author: Damien Wright
 # draft: false

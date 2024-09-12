@@ -9,7 +9,7 @@ tags:
   - performance
   - improvement
 pubDate: 2023-08-01
-cover: "stress-reduction-improved-fitness-performance.webp"
+cover: "../assets/images/stress-reduction-improved-fitness-performance.webp"
 coverAlt: Stress Reduction Improved Fitness Performance
 author: Damien Wright
 # draft: false
