@@ -1,7 +1,7 @@
 ---
 import type { CollectionEntry } from "astro:content";
 import OptimizedCover from "@components/OptimizedPicture.astro";
-import FormattedDate from "@components/FormattedDate.astro";
+// import FormattedDate from "@components/FormattedDate.astro";
 
 interface Props {
   post: CollectionEntry<"posts">;
@@ -40,7 +40,7 @@ const truncatedDescription = truncateUTF8String(post.data.description, 150);
         {post.data.tags.join(", ")}
       </div>
       <div class="flex-grow text-right">
-        <FormattedDate date={post.data.pubDate} />
+        <!-- <FormattedDate date={post.data.pubDate} /> -->
       </div>
     </div>
     <h3 class="mt-2 text-lg font-medium">

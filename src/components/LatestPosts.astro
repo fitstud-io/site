@@ -1,7 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import OptimizedCover from "@components/OptimizedPicture.astro";
-import FormattedDate from "@components/FormattedDate.astro";
+// import FormattedDate from "@components/FormattedDate.astro";
 
 const currentLocale = Astro.currentLocale ?? "us";
 
@@ -30,7 +30,7 @@ const latestPosts = allPosts.slice(0, 3);
             <div class="absolute bottom-0 end-0 start-0 bg-gradient-to-t p-4 md:p-5">
               <div class="mt-16 flex items-center gap-4 text-xs text-white">
                 <span>{post.data.tags.join(" ")}</span>
-                <FormattedDate date={post.data.pubDate} />
+                {/* <FormattedDate date={post.data.pubDate} /> */}
               </div>
               <h2 class="mt-2 text-lg font-bold text-white">
                 {post.data.title}
