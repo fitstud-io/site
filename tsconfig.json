@@ -11,5 +11,6 @@
       "@utils/*": ["src/utils/*"],
       "@consts": ["src/consts.ts"]
     }
-  }
+  },
+  "exclude": ["dist/"]
 }

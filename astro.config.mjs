@@ -1,4 +1,8 @@
+import path from 'path';
+import { fileURLToPath } from 'url';
+
 import { defineConfig } from "astro/config";
+
 import { remarkModifiedTime } from "./src/utils/remark-modified-time.mjs";
 import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
@@ -7,8 +11,12 @@ import pagefind from "astro-pagefind";
 import icon from "astro-icon";
 import tailwind from "@astrojs/tailwind";
 
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
 // https://astro.build/config
 export default defineConfig({
+  output: 'static',
+
   site: "https://fitstud.io/",
   trailingSlash: "ignore",
   prefetch: {
@@ -18,6 +26,10 @@ export default defineConfig({
 
   experimental: {
     contentCollectionCache: true,
+  },
+
+  image: {
+    domains: ['astro.build'],
   },
 
   markdown: {
@@ -44,4 +56,12 @@ export default defineConfig({
     }),
 
   ],
+
+  vite: {
+    resolve: {
+      alias: {
+        '~': path.resolve(__dirname, './src'),
+      },
+    },
+  },
 });
