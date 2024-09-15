@@ -38,7 +38,7 @@ export const HeaderLinks = [
 // Footer Links, src/components/Footer.astro
 export const FooterLinks = [
   { href: "/about/", title: "About" },
-  { href: "/", title: "Contact" },
+  { href: "/contact/", title: "Contact" },
   { href: "/", title: "Products" },
   { href: "/", title: "Swag" },
 ];

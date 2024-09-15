@@ -26,9 +26,7 @@ const {
 } = Astro.props;
 
 const images = import.meta.glob<{ default: ImageMetadata }>("../assets/images/*");
-// const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/images/*.{jpeg,jpg,png,webp,gif,avifwebp,gif,avif}')
 ---
-<!-- <Image src={import("../assets/images//" + post.data.cover)} alt={post.data.title} class="group-hover:scale-[1.03] transition duration-300 w-full" /> -->
 
 <Picture
   src={images[src]()}
