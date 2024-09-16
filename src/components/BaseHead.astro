@@ -51,6 +51,14 @@ const { title, description, image = "/blog-placeholder-1.avif" } = Astro.props;
 <!-- Google Analytics -->
 <GoogleAnalytics id="G-BKE9C2NE98" />
 
+<!-- Data Layer with GTM -->
+<script is:inline>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+</script>
+
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
