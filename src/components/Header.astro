@@ -1,14 +1,14 @@
 ---
 import Link from "@components/Links.astro";
 import { Icon } from "astro-icon/components";
-import { SITE_TITLE, HeaderLinks } from "@consts";
+import { SITE_TITLE, HeaderLinks, SocialLinks } from "@consts";
 ---
 
-<header class="fixed flex flex-wrap top-0 h-20 z-40 md:justify-start md:flex-nowrap w-full bg-white dark:bg-zinc-900 bg-opacity-85 backdrop-blur">
-  <nav class="relative max-w-7xl w-full flex flex-wrap md:grid md:grid-cols-12 basis-full items-center px-4 mx-auto" aria-label="Global">
+<header class="header">
+  <nav class="navbar" aria-label="Global">
     <div class="md:col-span-3">
-      <a class="flex flex-nowrap text-xl hover:text-primary transition duration-300" href="/" aria-label="Astroverse">
-        <img src="https://fitstud.io/images/logo.svg" width="24" height="24" class="inline-block mr-3" /> {SITE_TITLE}
+      <a class="flex flex-nowrap text-xl hover:text-primary transition duration-300" href="/" aria-label="FITSTUD.IO">
+        <img src="https://fitstud.io/images/logo.svg" width="24" height="24" class="inline-block mr-3" /> FIT<span>STUD</span>.IO
       </a>
     </div>
 
@@ -25,7 +25,7 @@ import { SITE_TITLE, HeaderLinks } from "@consts";
       </button>
 
       <div class="md:hidden">
-        <button type="button" class="hs-collapse-toggle size-[38px] flex justify-center items-center text-sm font-semibold rounded-lg text-black hover:bg-neutral-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:hover:bg-neutral-700" data-hs-collapse="#navbar-collapse-with-animation" aria-controls="navbar-collapse-with-animation" aria-label="Toggle navigation">
+        <button type="button" class="hs-collapse-toggle flex justify-center items-center text-sm font-semibold rounded-lg text-black hover:bg-neutral-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:hover:bg-neutral-700" data-hs-collapse="#navbar-collapse-with-animation" aria-controls="navbar-collapse-with-animation" aria-label="Toggle navigation">
           <Icon name="tabler:menu-2" class="hs-collapse-open:hidden flex-shrink-0 size-4"></Icon>
           <Icon name="tabler:menu-order" class="hs-collapse-open:block hidden flex-shrink-0 size-4"></Icon>
         </button>
@@ -45,6 +45,24 @@ import { SITE_TITLE, HeaderLinks } from "@consts";
             </Link>
           ))
         }
+        <div class="social md:hidden">
+          {
+            SocialLinks.map((link) => (
+              <button
+                type="button"
+                class="relative inline-flex h-12 w-12 items-center gap-x-2 bg-white px-4 py-3 text-neutral-500 hover:text-neutral-800 disabled:pointer-events-none disabled:opacity-50 dark:text-neutral-500 dark:hover:text-neutral-200"
+              >
+                <a
+                  href={link.href}
+                  class="absolute inset-0 z-10"
+                  aria-label={link.label}
+                  target="_blank"
+                />
+                <Icon name={link.icon} class="icon-base" />
+              </button>
+            ))
+          }
+        </div>
       </div>
     </div>
   </nav>
