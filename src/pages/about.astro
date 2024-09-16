@@ -13,7 +13,7 @@ import * as page from '../content/pages/about.mdx';
     <div class="row gy-5 gx-4 pb-10">
       <header class="col-12">
         <a href={page.frontmatter.slug} class="rounded-lg block overflow-hidden group">
-          <OptimizedCover src={page.frontmatter.cover} alt={page.frontmatter.title} class="group-hover:scale-[1.03] transition duration-300 w-full" />
+          <OptimizedCover src={page.frontmatter.cover} alt={page.frontmatter.title} loading="lazy" class="group-hover:scale-[1.03] transition duration-300 w-full" />
         </a>
         <h1 class="h2 mb-8 mt-3">
           <a href={page.frontmatter.slug} class="block hover:text-primary transition duration-300">

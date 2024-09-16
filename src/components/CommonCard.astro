@@ -32,7 +32,7 @@ const truncatedDescription = truncateUTF8String(post.data.description, 150);
 
 <article class="border-t border-gray-300/30 dark:border-gray-900/50 py-8 sm:flex lg:flex-col lg:border-t-0 xl:flex-row xl:items-center xl:border-t">
   <a href={`/posts/${post.slug}/`} class="rounded-lg block hover:text-red-400 overflow-hidden group order-2 w-full sm:w-2/5 lg:order-1 lg:w-full xl:w-2/5">
-    <OptimizedCover src={post.data.cover} alt={post.data.title} />
+    <OptimizedCover src={post.data.cover} alt={post.data.title} loading="lazy" />
   </a>
   <div class="order-1 mt-5 w-full px-2 sm:mt-0 sm:max-w-sm sm:pl-0 sm:pr-5 lg:order-2 lg:mt-4 xl:ml-5 xl:mt-0 xl:flex-1">
     <div class="flex items-center gap-4 text-xs">
