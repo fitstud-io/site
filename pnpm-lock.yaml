@@ -26,6 +26,9 @@ importers:
       '@astrojs/tailwind':
         specifier: ^5.1.0
         version: 5.1.0(astro@4.15.4(@types/node@22.5.4)(rollup@4.21.3)(sass@1.78.0)(typescript@5.5.4))(tailwindcss@3.4.10)
+      '@digi4care/astro-google-tagmanager':
+        specifier: ^1.2.1
+        version: 1.2.1(astro@4.15.4(@types/node@22.5.4)(rollup@4.21.3)(sass@1.78.0)(typescript@5.5.4))
       '@iconify-json/tabler':
         specifier: ^1.1.116
         version: 1.2.0
@@ -246,6 +249,11 @@ packages:
     resolution: {integrity: sha512-A9U+4PREWcS+CCYzKGIPovtGB/PBgnH/8oQyCE6Nr9drDJk6cMPpLQIEajpGPmG9tYF7N3FkRvhXm/AS9+0iKg==}
     engines: {node: '>=18.0.0'}
     hasBin: true
+
+  '@digi4care/astro-google-tagmanager@1.2.1':
+    resolution: {integrity: sha512-aNWhhjJxjPJmVG/dftor6PhByqWlCDMUt/XUa5aE4Avd1dzViApSr+1p5bVAnP3jdGkEK5kjZt5+Ff3vUqJmxw==}
+    peerDependencies:
+      astro: ^1.2.1 || ^2.0.0 || ^3.0.0-beta.0 || ^3.0.0 || ^4.0.0
 
   '@emmetio/abbreviation@2.3.3':
     resolution: {integrity: sha512-mgv58UrU3rh4YgbE/TzgLQwJ3pFsHHhCLqY20aJq+9comytTXUDNGG/SMtSeMJdkpxgXSXunBGLD8Boka3JyVA==}
@@ -3045,6 +3053,10 @@ snapshots:
       to-fast-properties: 2.0.0
 
   '@builder.io/partytown@0.10.2': {}
+
+  '@digi4care/astro-google-tagmanager@1.2.1(astro@4.15.4(@types/node@22.5.4)(rollup@4.21.3)(sass@1.78.0)(typescript@5.5.4))':
+    dependencies:
+      astro: 4.15.4(@types/node@22.5.4)(rollup@4.21.3)(sass@1.78.0)(typescript@5.5.4)
 
   '@emmetio/abbreviation@2.3.3':
     dependencies:

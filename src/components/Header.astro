@@ -2,11 +2,10 @@
 import Link from "@components/Links.astro";
 import { Icon } from "astro-icon/components";
 import { HeaderLinks, SocialLinks } from "@consts";
+import { GoogleTagmanagerNoscript } from '@digi4care/astro-google-tagmanager';
 ---
 
-<noscript>
-  <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MDPG45RB" height="0" width="0" style="display:none;visibility:hidden"></iframe>
-</noscript>
+<GoogleTagmanagerNoscript id="GTM_MDPG45RB" domain="https://fitstud.io" />
 <header class="header">
   <nav class="navbar" aria-label="Global">
     <div class="md:col-span-3">
