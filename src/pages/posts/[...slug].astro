@@ -24,7 +24,7 @@ const { Content } = await post.render();
       <header class="col-12">
         {
           post.data.cover && (
-            <OptimizedCover src={post.data.cover} alt={post.data.title} />
+            <OptimizedCover src={post.data.cover} alt={post.data.title} loading="lazy" />
           )
         }
         <div class="flex justify-between">
