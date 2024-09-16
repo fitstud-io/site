@@ -47,7 +47,7 @@ h3,
 h4,
 h5,
 h6 {
-  @apply font-sans font-light leading-snug mt-4 mb-2;
+  @apply font-sans font-medium leading-snug mt-4 mb-2;
 }
 
 h1,
@@ -83,7 +83,16 @@ h6,
 a {
   @apply hover:text-primary transition duration-300;
 }
+
 p,
 .p{
   @apply mb-2;
+}
+
+code {
+  @apply inline-flex p-5 bg-gray-100 dark:bg-zinc-900;
+}
+
+blockquote {
+  @apply border-l-4 border-primary italic my-8 pl-8 md:pl-12;
 }

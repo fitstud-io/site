@@ -10,22 +10,22 @@ author: Damien Wright
 
 ### {frontmatter.description}
 <form name="contact" class="w-full" method="POST" data-netlify="true">
-  <div class="flex items-center border-b border-gray-300 mb-6 py-4">
+  <div class="flex items-center border-b border-gray-300/50 mb-6 py-4">
     <label for="name" class="text-xs text-nowrap w-2/12">Full Name<span class="text-primary">*</span></label>
     <input type="text" name="name" placeholder="Jane Doe" aria-label="name" class="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" required/>
   </div>
 
-  <div class="flex items-center border-b border-gray-300 mb-6 py-4">
+  <div class="flex items-center border-b border-gray-300/50 mb-6 py-4">
     <label for="email" class="text-xs text-nowrap w-2/12">Email<span class="text-primary">*</span></label>
     <input type="email" name="email" placeholder="janedoe@gmail.com" aria-label="email" class="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" required/>
   </div>
 
-  <div class="flex border-b border-gray-300 mb-6 py-4 items-start">
-    <label for="message" class="text-xs text-nowrap w-2/12 py-1 h-full">Message<span class="text-primary">*</span></label>
-    <textarea name="message" placeholder="Write your message here." aria-label="message" rows="4" class="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" required></textarea>
+  <div class="flex items-start border-b border-gray-300/50 mb-6 py-4">
+    <label for="message" class="text-xs text-nowrap w-2/12 py-3 h-full">Message<span class="text-primary">*</span></label>
+    <textarea name="message" placeholder="Write your message here." aria-label="message" rows="5" class="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none resize-none" required></textarea>
   </div>
 
-  <button type="submit" class="w-full rounded bg-black dark:bg-white text-white dark:text-black hover:bg-primary px-6 pt-4 pb-2 font-semibold uppercase lg:mb-0 transition duration-300">
+  <button type="submit" class="w-full btn btn-primary pt-3 pb-1">
     Send >>
   </button>
 </form>

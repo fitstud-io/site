@@ -15,7 +15,7 @@ import * as page from '../content/pages/privacy.mdx';
         <a href={page.frontmatter.slug} class="rounded-lg block overflow-hidden group">
           <OptimizedCover src={page.frontmatter.cover} alt={page.frontmatter.title} class="group-hover:scale-[1.03] transition duration-300 w-full" />
         </a>
-        <h1 class="h1 mb-8 mt-3">
+        <h1 class="h2 mb-8 mt-3">
           <a href={page.frontmatter.slug} class="block hover:text-primary transition duration-300">
             {page.frontmatter.title}
           </a>
@@ -25,7 +25,7 @@ import * as page from '../content/pages/privacy.mdx';
   </div>
 
   <!-- About Articles-->
-  <article class="mt-12 sm:mt-16 lg:ml-12 lg:mt-0 lg:w-1/2 xl:ml-16 py-10">
+  <article class="mt-12 sm:mt-16 lg:ml-12 lg:mt-0 lg:w-1/2 xl:ml-16 py-10 text-xl lg:text-2xl">
     <PageContent />
   </article>
   <LatestPosts />
