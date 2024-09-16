@@ -39,8 +39,8 @@ export const HeaderLinks = [
 export const FooterLinks = [
   { href: "/about/", title: "About" },
   { href: "/contact/", title: "Contact" },
-  { href: "/", title: "Products" },
-  { href: "/", title: "Swag" },
+  { href: "/products/", title: "Products" },
+  // { href: "/", title: "Swag" },
 ];
 
 //  Legal Links
