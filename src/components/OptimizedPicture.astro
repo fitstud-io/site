@@ -10,7 +10,7 @@ interface Props {
   // formats?: string[];
   // fallbackFormat?: string;
   // decoding: sync | async | auto;
-  loading: string;
+  loading: "lazy" | "eager" | null | undefined;
   class?: string;
 }
 
