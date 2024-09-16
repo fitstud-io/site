@@ -185,11 +185,6 @@
 //   }
 // }
 
-
-//   .lg\:sticky {
-//     @apply lg:sticky;
-//   }
-
 // footer
 // footer p a {
 //   @apply transition-all duration-200 hover:text-white;
@@ -197,4 +192,11 @@
 
 .article{
   @apply mt-12 sm:mt-16 lg:ml-12 lg:mt-0 lg:w-1/2 xl:ml-16 py-10 text-xl lg:text-2xl;
+}
+
+.hero {
+  @apply pb-10;
+}
+.hero-cover {
+  @apply rounded-lg block hover:text-primary overflow-hidden;
 }

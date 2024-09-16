@@ -89,7 +89,7 @@
   @apply py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent text-black hover:bg-neutral-100 dark:text-white dark:hover:bg-neutral-700 transition disabled:opacity-50 disabled:pointer-events-none
 }
 
-  .navbar-menu .navbar-item {
+.navbar-menu .navbar-item {
   @apply inline-flex items-center gap-x-2 text-sm font-medium rounded-lg;
 }
 
@@ -101,11 +101,15 @@
   @apply flex flex-col gap-y-4 gap-x-0 mt-5 md:flex-row md:justify-center md:items-center md:gap-y-0 md:gap-x-7 md:mt-0;
 }
 .navbar-links a {
-  @apply px-4 py-3 font-medium bg-gradient-to-r from-red-300 to-red-400 bg-[length:0px_10px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 hover:bg-[length:100%_3px] group-hover:bg-[length:100%_10px];
+  @apply px-4 py-3 font-medium bg-gradient-to-r from-red-300 to-red-400 dark:from-red-600 dark:to-red-800 bg-[length:0px_10px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 hover:bg-[length:100%_3px] group-hover:bg-[length:100%_10px];
 }
 
 .social {
   @apply mt-2 flex flex-wrap gap-2 sm:order-3 sm:mb-0 sm:gap-0;
+}
+
+.header .social {
+  @apply md:hidden items-center;
 }
 
 // search style
