@@ -58,12 +58,12 @@ export const SocialLinks = [
     label: "Instagram",
   },
   {
-    href: "https://x.com/fitstud-io",
+    href: "https://x.com/fitstud_io",
     icon: "tabler:brand-x",
     label: "X",
   },
   {
-    href: "https://github.com/fitstud_io",
+    href: "https://github.com/fitstud-io",
     icon: "tabler:brand-github",
     label: "GitHub",
   },

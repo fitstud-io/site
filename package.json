@@ -22,6 +22,7 @@
     "@astrojs/tailwind": "^5.1.0",
     "@iconify-json/tabler": "^1.1.116",
     "astro": "^4.15.4",
+    "astro-google-analytics": "^1.0.3",
     "astro-icon": "^1.1.0",
     "astro-pagefind": "^1.5.0",
     "dayjs": "^1.11.11",
