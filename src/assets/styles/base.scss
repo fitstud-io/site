@@ -115,5 +115,9 @@ table tr:nth-child(odd) {
 
 table th,
 table td {
-  @apply whitespace-nowrap px-6 py-4;
+  @apply px-6 py-4;
+}
+
+table img {
+  @apply max-w-32 rounded-lg;
 }
