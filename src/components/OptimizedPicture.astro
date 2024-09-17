@@ -7,8 +7,8 @@ interface Props {
   alt: string;
   widths?: number[];
   sizes?: string;
-  // formats?: string[];
-  // fallbackFormat?: string;
+  formats?: string[];
+  fallbackFormat?: string;
   // decoding: sync | async | auto;
   loading: "lazy" | "eager" | null | undefined;
   class?: string;
@@ -23,8 +23,8 @@ const {
             (max-width: 720px) 700px,
             (max-width: 1600px) 980px,
             1960px`,
-  // formats = ["avif", 'webp'],
-  // fallbackFormat = "webp",
+  formats = ["avif"],
+  fallbackFormat = "avif",
   class: className = "group-hover:scale-[1.03] transition duration-300 w-full"
 } = Astro.props;
 
