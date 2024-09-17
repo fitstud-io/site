@@ -1,7 +1,5 @@
 ---
 import { GoogleAnalytics } from 'astro-google-analytics';
-import { GoogleTagmanager } from '@digi4care/astro-google-tagmanager';
-// import { GoogleTagmanager, SiteVerification } from '@digi4care/astro-google-tagmanager';
 
 interface Props {
   title: string;
@@ -52,10 +50,6 @@ const { title, description, image = "/blog-placeholder-1.avif" } = Astro.props;
 
 <!-- Google Analytics -->
 <GoogleAnalytics id="G-BKE9C2NE98" />
-
-<!-- Data Layer with GTM -->
-<!-- <SiteVerification id="GTM_MDPG45RB" /> -->
-<GoogleTagmanager id="GTM_MDPG45RB" partytown={false} domain="https://fitstud.io" />
 
 <!-- Preline CSS -->
 <script>
