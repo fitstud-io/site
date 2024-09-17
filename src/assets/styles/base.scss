@@ -96,3 +96,24 @@ code {
 blockquote {
   @apply border-l-4 border-primary italic my-8 pl-8 md:pl-12;
 }
+
+table {
+  @apply table-auto min-w-full w-full text-left text-sm font-light text-zinc-600 dark:text-white;
+}
+
+table thead {
+  @apply border-b border-neutral-200 bg-white font-medium dark:border-white/10 dark:bg-zinc-900;
+}
+
+table tr {
+  @apply border-b border-neutral-200 bg-black/[0.02] dark:border-white/10;
+}
+
+table tr:nth-child(odd) {
+  @apply bg-white/[0.10];
+}
+
+table th,
+table td {
+  @apply whitespace-nowrap px-6 py-4;
+}
