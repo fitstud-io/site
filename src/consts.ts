@@ -4,7 +4,7 @@
 // Base Page Metadata, src/layouts/BaseLayout.astro
 export const BRAND_NAME = "FITSTUD.IO";
 export const SITE_TITLE = "FITSTUD.IO";
-export const SITE_DESCRIPTION = "An Astro Theme for Visual Storytelling";
+export const SITE_DESCRIPTION = "A fitness blog built by a nerd for Gym Rats";
 
 // Tags Page Metadata, src/pages/tags/index.astro
 export const Tags_TITLE = "FITSTUD.IO - All Tags";
