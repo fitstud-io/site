@@ -40,6 +40,7 @@ export const FooterLinks = [
   { href: "/about/", title: "About" },
   { href: "/contact/", title: "Contact" },
   { href: "/products/", title: "Products" },
+  { href: "/partners/", title: "Partners" },
   // { href: "/", title: "Swag" },
 ];
 
