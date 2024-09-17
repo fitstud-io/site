@@ -1,5 +1,5 @@
-import path from 'path';
-import { fileURLToPath } from 'url';
+// import path from 'path';
+// import { fileURLToPath } from 'url';
 
 import { defineConfig } from "astro/config";
 
@@ -29,7 +29,8 @@ export default defineConfig({
   },
 
   image: {
-    domains: ['astro.build'],
+    cacheDir: "./.cache/image",
+    defaultFormat: "avif",
   },
 
   markdown: {
