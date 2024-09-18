@@ -1,9 +1,9 @@
 .btn {
-  @apply inline-block rounded-lg px-6 py-3 font-semibold transition duration-300;
+  @apply inline-block rounded-lg px-6 py-4 uppercase font-semibold transition duration-300;
 }
 
 .btn-primary {
-  @apply bg-black text-white hover:bg-primary hover:text-white;
+  @apply bg-black text-white hover:bg-primary hover:text-white dark:bg-white dark:text-black dark:hover:bg-primary  dark:hover:text-white;
 }
 
 .btn-outline-primary {

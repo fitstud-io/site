@@ -106,11 +106,15 @@ table thead {
 }
 
 table tr {
-  @apply border-b border-neutral-200 bg-black/[0.02] dark:border-white/10;
+  @apply border-b border-neutral-200 bg-white/[0.10] dark:bg-white/[0.02] dark:border-white/10;
 }
 
 table tr:nth-child(odd) {
-  @apply bg-white/[0.10];
+  @apply bg-black/[0.02] dark:bg-black/[0.10];
+}
+
+table th {
+  @apply bg-white dark:bg-zinc-900;
 }
 
 table th,

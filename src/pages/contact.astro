@@ -12,11 +12,11 @@ import * as page from '../content/pages/contact.mdx';
   <div class="relative lg:sticky lg:top-28 lg:w-1/2">
     <div class="row gy-5 gx-4 pb-10">
       <header class="col-12">
-        <a href={page.frontmatter.slug} class="rounded-lg block overflow-hidden group">
+        <a href={'/' + page.frontmatter.slug + '/'} class="rounded-lg block overflow-hidden group">
           <OptimizedCover src={page.frontmatter.cover} alt={page.frontmatter.title} loading="lazy" class="group-hover:scale-[1.03] transition duration-300 w-full" />
         </a>
         <h1 class="h2 mb-8 mt-3">
-          <a href={page.frontmatter.slug} class="block hover:text-primary transition duration-300">
+          <a href={'/' + page.frontmatter.slug + '/'} class="block hover:text-primary transition duration-300">
             {page.frontmatter.title}
           </a>
         </h1>
