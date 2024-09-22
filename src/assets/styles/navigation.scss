@@ -1,54 +1,4 @@
-// navbar toggler
-// input#nav-toggle:checked ~ label#show-button {
-//   @apply hidden;
-// }
-
-// input#nav-toggle:checked ~ label#hide-button {
-//   @apply flex md:hidden;
-// }
-
-// input#nav-toggle:checked ~ #nav-menu {
-//   @apply block md:flex;
-// }
-
-// .header {
-//   @apply fixed flex-nowrap top-0 z-10 w-full items-center pt-0;
-// }
-
-// .navbar {
-//   @apply relative flex w-full h-20 items-center justify-between bg-white bg-opacity-85 border-white border-b px-4 backdrop-blur-md sm:px-6 lg:px-8 md:shadow-md;
-// }
-// .navbar-brand {
-//   @apply text-2xl font-primary;
-// }
-
-// .navbar-brand img {
-//   @apply h-auto sm:h-auto sm:max-w-full #{!important};
-// }
-
-// .navbar-nav {
-//   @apply text-center md:text-left;
-// }
-
-// .nav-item {
-//   @apply mx-1;
-// }
-
-// .nav-link {
-//   @apply font-primary text-lg text-dark transition hover:text-primary md:p-4;
-// }
-
-// .nav-dropdown-list {
-//   @apply z-10 rounded-lg bg-white px-6 py-3 shadow transition;
-// }
-
-// .nav-dropdown-item {
-//   @apply mb-1;
-// }
-
-// .nav-dropdown-link {
-//   @apply block min-w-[150px] py-1 text-[17px] font-semibold text-dark transition hover:text-primary;
-// }
+// Header
 
 .header {
   @apply fixed flex flex-wrap top-0 h-20 z-40 md:justify-start md:flex-nowrap w-full;
@@ -124,4 +74,25 @@
   &.open {
     @apply visible opacity-100;
   }
+}
+
+// footer
+
+.footer {
+  @apply mt-auto w-full max-w-[85rem] py-10 mx-auto text-gray-500;
+}
+
+.footer nav {
+  @apply mx-auto w-full max-w-[85rem] px-4;
+}
+
+.foot-row {
+  @apply flex flex-col items-center sm:flex-row sm:justify-between;
+}
+
+.foot-col {
+  @apply mt-2 flex flex-row gap-5 sm:mt-0 sm:flex-row sm:items-center sm:ps-5;
+}
+.buymecoffee {
+  @apply ml-0 mt-8 flex flex-nowrap text-sm shrink-0 items-center justify-center hover:underline md:ml-6 md:mt-0;
 }
