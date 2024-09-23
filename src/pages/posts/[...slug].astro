@@ -28,23 +28,21 @@ const { Content } = await post.render();
           )
         }
         <div class="flex justify-between">
-          <small
-            >Publish on <FormattedDate date={post.data.pubDate} />，Update on <FormattedDate
-              date={new Date().toISOString()}
-            /></small
-          >
+          <small>
+            Publish on <FormattedDate date={post.data.pubDate} /> <span class="text-gray-400">Update on <FormattedDate date={new Date().toISOString()} /></span>
+          </small>
         </div>
         <h1 class="h3">
           <a href={`/posts/${post.slug}/`} title={post.data.title}>
             {post.data.title}
           </a>
         </h1>
-        </header>
+      </header>
     </div>
   </div>
-  <div class="mt-0 lg:ml-12 lg:w-1/2 xl:ml-16 pb-10 lg:pt-10">
+  <div class="article">
     <!-- Post Articles-->
-    <article class="text-xl lg:text-2xl">
+    <article>
       <h2 class="h3">{post.data.description}</h2>
       <Content />
     </article>
@@ -52,7 +50,7 @@ const { Content } = await post.render();
       <div class="flex-auto">
         {
           post.data.tags.map((tag) => (
-            <span class="mb-2 mr-2 inline-block rounded-full px-3 py-1 text-sm font-semibold">
+            <span class="tags">
               <a href={`/tags/${tag}/1/`}>#{tag}</a>
             </span>
           ))
