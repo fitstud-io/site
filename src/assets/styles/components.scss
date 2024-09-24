@@ -217,8 +217,8 @@
   @apply text-primary mr-1 content-["\00BB"];
 }
 
-.article img {
-  @apply rounded-xl w-full transition-all duration-700 filter grayscale hover:grayscale-0 py-5;
+.article article img {
+  @apply rounded-xl overflow-hidden w-full transition-all duration-700 filter grayscale hover:grayscale-0 my-5;
 }
 
 .tags {
