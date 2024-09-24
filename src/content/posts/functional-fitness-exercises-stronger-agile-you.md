@@ -34,19 +34,12 @@ Functional fitness revolves around the concept of training your body to perform 
 ### Key Functional Fitness Exercises
 
 1. **Squats:** Squats are fundamental for functional fitness, as they mimic the motion of bending down to pick up objects. Whether you're lifting a heavy box or simply tying your shoelaces, strong legs and a stable core are essential.
-
 2. **Deadlifts:** Deadlifts strengthen the posterior chain, which includes the muscles in your lower back, glutes, and hamstrings. This exercise replicates the motion of lifting objects from the ground.
-
 3. **Push-Ups:** Push-ups work the chest, shoulders, and triceps, enhancing your upper body strength for pushing and lifting movements.
-
 4. **Lunges:** Lunges improve lower body strength and stability, which are essential for walking and climbing stairs.
-
 5. **Planks:** Planks are excellent for core strength and stability. A strong core is vital for maintaining good posture and protecting your lower back.
-
 6. **Kettlebell Swings:** Kettlebell swings target the entire body and promote explosive power, mimicking movements such as swinging a heavy bag or even playing a sport.
-
 7. **Medicine Ball Throws:** Throwing a medicine ball against a wall or to a partner enhances power, coordination, and upper body strength, simulating movements like passing a heavy object to someone.
-
 8. **Farmer's Walk:** Carrying heavy weights in each hand while walking is a practical exercise that enhances grip strength and overall functional strength.
 
 ### Getting Started with Functional Fitness

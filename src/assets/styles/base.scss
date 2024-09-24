@@ -126,3 +126,7 @@ table td {
 table img {
   @apply max-w-32 rounded-lg;
 }
+
+ol li {
+  @apply list-decimal list-inside marker:text-primary;
+}
