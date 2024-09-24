@@ -20,13 +20,15 @@ const { Content } = await post.render();
 <BaseLayout title={post.data.title} description={post.data.description}>
   <!-- Post Hero-->
   <div class="relative lg:sticky lg:top-28 lg:w-1/2">
-    <div class="row gy-5 gx-4 lg:pb-10">
+    <div class="hero row">
       <header class="col-12">
-        {
-          post.data.cover && (
-            <OptimizedCover src={post.data.cover} alt={post.data.title} loading="lazy" />
-          )
-        }
+        <a href={`/posts/${post.slug}/`} class="hero-cover">
+          {
+            post.data.cover && (
+              <OptimizedCover src={post.data.cover} alt={post.data.title} loading="lazy" />
+            )
+          }
+        </a>
         <div class="flex justify-between">
           <small>
             Publish on <FormattedDate date={post.data.pubDate} /> <span class="text-gray-400">Update on <FormattedDate date={new Date().toISOString()} /></span>
