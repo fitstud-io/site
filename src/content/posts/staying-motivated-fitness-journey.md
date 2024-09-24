@@ -10,9 +10,8 @@ tags:
   - positivity
 pubDate: 2023-06-26
 cover: "../assets/images/staying-motivated-fitness-journey.webp"
-coverAlt: Staying Motivated in Your Fitness Journey
 author: Damien Wright
-# draft: false
+draft: false
 ---
 
 In the world of fitness, setbacks are a common occurrence. These hurdles can manifest as plateaus in your progress, injuries, life events, or simply a loss of motivation. However, the true test of your success in your fitness journey lies in your ability to overcome these obstacles and keep your motivation alive. Let's explore strategies for dealing with setbacks and staying motivated as you pursue your health and wellness goals.

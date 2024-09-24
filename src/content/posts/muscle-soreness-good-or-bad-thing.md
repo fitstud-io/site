@@ -10,9 +10,8 @@ tags:
   - journey
 pubDate: 2023-08-28
 cover: "../assets/images/muscle-soreness-good-or-bad-thing.webp"
-coverAlt: Is Muscle Soreness a Good or Bad Thing
 author: Damien Wright
-# draft: false
+draft: false
 ---
 
 The question of whether muscle soreness is good or bad doesn't have a simple answer. Much like many aspects of fitness, it depends on the context.
@@ -28,6 +27,8 @@ During muscle growth, known as skeletal muscle hypertrophy, additional myosin fi
 ### So, why do we experience muscle soreness?
 
 For beginners or those who haven't been active for a while, muscle soreness is often more pronounced. When your body hasn't been exposed to regular training for months or even years, you're likely to feel sore for a few days after a workout.
+
+![So, why do we experience muscle soreness?](/images/posts/experience-muscle-soreness.webp)
 
 Another reason for soreness can be trying new training methods or deviating from your usual routine. For instance, if you're a regular barbell squatter, you're unlikely to wake up sore the day after a challenging workout. However, if you decide to give leg presses a shot after a year of not doing them, you'll probably feel it the next day. Both exercises primarily work the quadriceps, but the biomechanics and muscle fiber recruitment differ, making the leg press feel more challenging when you're not used to it.
 

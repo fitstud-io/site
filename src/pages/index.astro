@@ -6,11 +6,18 @@ import Card from "@components/CommonCard.astro";
 import Pagination from "@components/Pagination.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "@consts";
 
-const allPosts = await getCollection("posts");
+const allPosts = await getCollection("posts", ({ data }) => {
+  return data.draft !== true;
+});
+
 allPosts.sort(
   (a, b) =>
     new Date(b.data.pubDate).valueOf() - new Date(a.data.pubDate).valueOf(),
 );
+
+// const publishedBlogEntries = await getCollection('blog', ({ data }) => {
+//   return data.draft !== true;
+// });
 
 const postsPerPage = 15;
 const firstPagePosts = allPosts.slice(0, postsPerPage);

@@ -10,9 +10,8 @@ tags:
   - weight-loss
 pubDate: 2023-08-28
 cover: "../assets/images/is-morning-key-weight-loss-success.webp"
-coverAlt: "Timing Your Workouts: Is Morning the Key to Weight Loss Success?"
 author: Damien Wright
-# draft: false
+draft: false
 ---
 
 The age-old question of whether there's an optimal time to exercise has kept fitness enthusiasts in contemplation. Health and fitness experts have traditionally advocated that the best time to work out is whenever it fits into your schedule. This advice holds true, although late-night gym-goers should take heed of certain guidelines.
@@ -28,6 +27,8 @@ Previous research has explored the types of workouts that facilitate weight loss
 ### The Study: Shedding Light on Morning Exercise
 
 The study in question analyzed data from 2003 to 2006, collected by the Centers for Disease Control and Prevention. It involved 5,285 adults who used accelerometers to monitor their physical activity. The findings indicated that those who exercised in the morning tended to have lower body mass indexes (BMIs) and smaller waist circumferences compared to those who worked out later in the day. They also followed healthier diets, consumed fewer calories, and were more consistent in their workout times.
+
+![The Study: Shedding Light on Morning Exercise](/images/posts/shedding-light-morning-exercise.webp)
 
 ### Morning Workouts: The Fitness Professional Perspective
 

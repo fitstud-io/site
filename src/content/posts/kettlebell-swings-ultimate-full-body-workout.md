@@ -40,7 +40,7 @@ Engaging these muscle groups simultaneously makes kettlebell swings an efficient
 
 >**Note:** Proper form is crucial to ensure optimal muscle activation while minimizing injury risks.
 
-<img src="/images/kettlebell-swings-workout.webp" alt="Executing Kettlebell Swings Correctly" class="rounded-lg transition-all duration-600 cursor-pointer filter grayscale hover:grayscale-0">
+<img src="/images/posts/kettlebell-swings-workout.webp" alt="Executing Kettlebell Swings Correctly" class="rounded-lg">
 
 ### Executing Kettlebell Swings Correctly
 

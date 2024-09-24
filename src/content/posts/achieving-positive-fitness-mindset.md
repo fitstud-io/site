@@ -12,7 +12,7 @@ pubDate: 2023-04-01
 cover: "../assets/images/achieving-positive-fitness-mindset.webp"
 coverAlt: Achieving a Positive Fitness Mindset
 author: Damien Wright
-# draft: false
+draft: false
 ---
 
 In the pursuit of physical fitness, many individuals focus solely on the tangible aspects of their journey: the workouts, diets, and measurable progress. However, often overlooked but equally crucial is the mental aspect of fitness. Your mindset plays a pivotal role in your ability to achieve and maintain a healthy and active lifestyle. To truly master the fitness game, you must cultivate a positive fitness mindset.
