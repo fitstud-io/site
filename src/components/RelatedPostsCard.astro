@@ -9,7 +9,9 @@ const { currentCategory, currentSlug } = Astro.props;
 async function getRelatedArticlesByCategory(): Promise<
   CollectionEntry<"posts">[]
 > {
-  const allPosts = await getCollection("posts");
+  const allPosts = await getCollection("posts", ({ data }) => {
+    return data.draft !== true;
+  });
   return allPosts
     .filter(
       (post) =>

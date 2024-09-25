@@ -34,7 +34,7 @@ const { Content } = await post.render();
             Publish on <FormattedDate date={post.data.pubDate} /> <span class="text-gray-400">Update on <FormattedDate date={new Date().toISOString()} /></span>
           </small>
         </div>
-        <h1 class="h3">
+        <h1 class="h2">
           <a href={`/posts/${post.slug}/`} title={post.data.title}>
             {post.data.title}
           </a>

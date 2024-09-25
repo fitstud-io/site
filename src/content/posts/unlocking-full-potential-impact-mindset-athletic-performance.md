@@ -39,7 +39,7 @@ Cultivating a beneficial mindset takes time and dedication, but it is achievable
 
 ### Real-World Examples of Mindset Influence
 
-<img src="/images/michael-phelps.webp" alt="Real-World Examples of Mindset Influence" class="rounded-lg transition-all duration-600 cursor-pointer filter grayscale hover:grayscale-0">
+<img src="/images/posts/michael-phelps.webp" alt="Real-World Examples of Mindset Influence"/>
 
 Many elite athletes credit their mental training for their success. For instance, Michael Phelps extensively used visualization techniques to prepare for races, contributing to his Olympic triumphs. Serena Williams' remarkable comebacks showcase a mindset centered on resilience and continuous improvement.
 

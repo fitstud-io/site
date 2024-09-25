@@ -3,7 +3,9 @@ import { getCollection } from "astro:content";
 import { SITE_TITLE, SITE_DESCRIPTION } from "@consts";
 
 export async function GET(context) {
-  let posts = await getCollection("posts");
+  let posts = await getCollection("posts", ({ data }) => {
+    return data.draft !== true;
+  });
 
   posts = posts
     .sort((a, b) => new Date(b.data.pubDate) - new Date(a.data.pubDate))
