@@ -11,7 +11,7 @@ tags:
 pubDate: 2024-09-26
 cover: "../assets/images/optimal-weekly-sets-muscle-growth.webp"
 author: Damien Wright
-draft: true
+draft: false
 ---
 
 Current research sheds light on how many sets to perform per muscle group each week for optimal hypertrophy. While training volume is a key factor in muscle growth, one may wonder if more sets always equate to more gains. What’s the minimum effective volume?
